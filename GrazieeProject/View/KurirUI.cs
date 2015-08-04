@@ -21,6 +21,7 @@ namespace GrazieeProject.View
         {
             InitializeComponent();
             s_KurirManager = new KurirManager();
+            txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(4));
             DisplayKurir();
         }
 
@@ -28,10 +29,12 @@ namespace GrazieeProject.View
         {
             if (txt_NamaKurir.TextLength > 0 && txt_NoTelpKurir.TextLength > 0 && txt_AlamatKurir.TextLength > 0)
             {
-                s_Kurir = new Kurir(txt_IdKurir.Text.ToString(), txt_NamaKurir.Text.ToString(), txt_NoTelpKurir.Text.ToString(), txt_AlamatKurir.Text.ToString());
+
+                s_Kurir = new Kurir(Utils.ConcatMaxID(txt_IdKurir.Text.ToString(),txt_IdKurirNum.Text.ToString()), txt_NamaKurir.Text.ToString(), txt_NoTelpKurir.Text.ToString(), txt_AlamatKurir.Text.ToString());
                 if (s_KurirManager.AddKurir(s_Kurir))
                 {
                     MessageBox.Show("Data berhasil ditambah");
+                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(4));
                 }
                 else
                 {
@@ -48,10 +51,11 @@ namespace GrazieeProject.View
         {
             if (txt_NamaKurir.TextLength > 0 && txt_NoTelpKurir.TextLength > 0 && txt_AlamatKurir.TextLength > 0)
             {
-                s_Kurir = new Kurir(txt_IdKurir.Text.ToString(), txt_NamaKurir.Text.ToString(), txt_NoTelpKurir.Text.ToString(), txt_AlamatKurir.Text.ToString());
+                s_Kurir = new Kurir(Utils.ConcatMaxID(txt_IdKurir.Text.ToString(), txt_IdKurirNum.Text.ToString()), txt_NamaKurir.Text.ToString(), txt_NoTelpKurir.Text.ToString(), txt_AlamatKurir.Text.ToString());
                 if (s_KurirManager.UpdateKurir(s_Kurir))
                 {
                     MessageBox.Show("Data berhasil diubah");
+                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(4));
                 }
                 else
                 {
@@ -68,10 +72,11 @@ namespace GrazieeProject.View
         {
             if (txt_NamaKurir.TextLength > 0 && txt_NoTelpKurir.TextLength > 0 && txt_AlamatKurir.TextLength > 0)
             {
-                s_Kurir = new Kurir(txt_IdKurir.Text.ToString(), txt_NamaKurir.Text.ToString(), txt_NoTelpKurir.Text.ToString(), txt_AlamatKurir.Text.ToString());
+                s_Kurir = new Kurir(Utils.ConcatMaxID(txt_IdKurir.Text.ToString(), txt_IdKurirNum.Text.ToString()), txt_NamaKurir.Text.ToString(), txt_NoTelpKurir.Text.ToString(), txt_AlamatKurir.Text.ToString());
                 if (s_KurirManager.DeleteKurir(s_Kurir))
                 {
                     MessageBox.Show("Data berhasil dihapus");
+                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(4));
                 }
                 else
                 {
@@ -91,11 +96,12 @@ namespace GrazieeProject.View
             if (dialogResult == DialogResult.Yes)
             {
                 s_Kurir = new Kurir();
-                s_Kurir.Id_kurir = txt_IdKurir.Text.ToString();
+                s_Kurir.Id_kurir = Utils.ConcatMaxID(txt_IdKurir.Text.ToString(), txt_IdKurirNum.Text.ToString());
 
                 if (s_KurirManager.DeleteKurirPermanen(s_Kurir))
                 {
                     MessageBox.Show("Data berhasil dihapus permanen");
+                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(4));
                 }
                 else
                 {
@@ -117,6 +123,7 @@ namespace GrazieeProject.View
                 if (s_KurirManager.RestoreData())
                 {
                     MessageBox.Show("Data berhasil dipulihkan");
+                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(4));
                 }
                 else
                 {
@@ -143,7 +150,7 @@ namespace GrazieeProject.View
                 int currentRow = int.Parse(e.RowIndex.ToString());
                 if (e.RowIndex > -1)
                 {
-                    txt_IdKurir.Text = dg_DisplayKurir[0, currentRow].Value.ToString();
+                    txt_IdKurirNum.Text = dg_DisplayKurir[0, currentRow].Value.ToString().Substring(4);
                     txt_NamaKurir.Text = dg_DisplayKurir[1, currentRow].Value.ToString();
                     txt_AlamatKurir.Text = dg_DisplayKurir[2, currentRow].Value.ToString();
                     txt_NoTelpKurir.Text = dg_DisplayKurir[3, currentRow].Value.ToString();
@@ -151,7 +158,7 @@ namespace GrazieeProject.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Gagal get data kurir", "Error");
+                MessageBox.Show("Gagal get data kurir : "+ex, "Error");
             }
         }
     }

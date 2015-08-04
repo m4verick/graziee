@@ -44,7 +44,7 @@
             this.lblNamaPelanggan = new System.Windows.Forms.Label();
             this.lblIdPelanggan = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtIdKurirNum = new System.Windows.Forms.TextBox();
+            this.txt_IdKurirNum = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplayKurir)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -187,7 +187,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtIdKurirNum);
+            this.groupBox1.Controls.Add(this.txt_IdKurirNum);
             this.groupBox1.Controls.Add(this.btn_PulihkanData);
             this.groupBox1.Controls.Add(this.btn_HapusPermanen);
             this.groupBox1.Controls.Add(this.btn_DeleteKurir);
@@ -208,13 +208,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Data";
             // 
-            // txtIdKurirNum
+            // txt_IdKurirNum
             // 
-            this.txtIdKurirNum.Location = new System.Drawing.Point(232, 56);
-            this.txtIdKurirNum.Name = "txtIdKurirNum";
-            this.txtIdKurirNum.ReadOnly = true;
-            this.txtIdKurirNum.Size = new System.Drawing.Size(73, 20);
-            this.txtIdKurirNum.TabIndex = 13;
+            this.txt_IdKurirNum.Location = new System.Drawing.Point(232, 56);
+            this.txt_IdKurirNum.Name = "txt_IdKurirNum";
+            this.txt_IdKurirNum.ReadOnly = true;
+            this.txt_IdKurirNum.Size = new System.Drawing.Size(73, 20);
+            this.txt_IdKurirNum.TabIndex = 13;
             // 
             // KurirUI
             // 
@@ -252,7 +252,7 @@
         private System.Windows.Forms.Label lblNamaPelanggan;
         private System.Windows.Forms.Label lblIdPelanggan;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtIdKurirNum;
+        private System.Windows.Forms.TextBox txt_IdKurirNum;
 
     }
 }

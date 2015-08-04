@@ -102,7 +102,7 @@ namespace GrazieeProject.Control
             return UTF8Encoding.UTF8.GetString(resultArray);
         }
 
-        public string DisplayMaxID(string num)
+        public static string DisplayMaxID(string num)
         {
             int numId;
             if (!num.Equals(String.Empty))
@@ -118,7 +118,7 @@ namespace GrazieeProject.Control
             return "undefined";
         }
 
-        public string ConcatMaxID(string letter, string num)
+        public static string ConcatMaxID(string letter, string num)
         {
             string concatID;
             if (!letter.Equals(String.Empty) && !num.Equals(String.Empty))
