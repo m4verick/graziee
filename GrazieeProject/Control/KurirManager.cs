@@ -84,7 +84,7 @@ namespace GrazieeProject.Control
         {
             bool result = false;
 
-            query = "UPDATE kurir SET status_deleted = 1 WHERE id_pelanggan = '" + kurir.Id_kurir + "'";
+            query = "UPDATE kurir SET status_deleted = 1 WHERE id_kurir = '" + kurir.Id_kurir + "'";
 
             try
             {
@@ -163,6 +163,35 @@ namespace GrazieeProject.Control
             dataSet = new DataSet();
             query = string.Empty;
             query = "SELECT * FROM kurir";
+
+            try
+            {
+                connect.Open();
+                adapt = new MySqlDataAdapter(query, connect);
+                adapt.Fill(dataSet);
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                return null;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dataSet;
+        }
+
+        public DataSet GetDataKurirComboBox()
+        {
+            dataSet = new DataSet();
+            query = string.Empty;
+            query = "SELECT id_kurir, nama_kurir FROM kurir";
 
             try
             {

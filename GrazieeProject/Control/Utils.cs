@@ -115,7 +115,10 @@ namespace GrazieeProject.Control
                 else if (numId.ToString().Length == 4) return numId.ToString();
                 else return "undefined";
             }
-            return "undefined";
+            else
+            {
+                return "0001";
+            }
         }
 
         public static string ConcatMaxID(string letter, string num)

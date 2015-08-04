@@ -16,7 +16,7 @@ namespace GrazieeProject.Control
         private MySqlConnection connect;
         private MySqlCommand cmd;
         private MySqlDataAdapter adapt;
-        //private MySqlDataReader reader;
+        private MySqlDataReader reader;
 
         private DataSet dataSet;
         // private DataTable dataTable;
@@ -213,6 +213,44 @@ namespace GrazieeProject.Control
                 connect.Close();
             }
             return dataSet;
+        }
+
+        public string GetMaxIDPelanggan()
+        {
+            string result = String.Empty;
+
+            query = string.Empty;
+            query = "SELECT MAX(id_pelanggan) FROM pelanggan";
+
+            try
+            {
+                connect.Open();
+                cmd = new MySqlCommand(query, connect);
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    result = reader.GetString(0);
+                }
+                else
+                {
+                    result = String.Empty;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                result = String.Empty;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                result = String.Empty;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return result;
         }
     }
 }

@@ -21,6 +21,7 @@ namespace GrazieeProject.View
         {
             InitializeComponent();
             s_PelangganManager = new PelangganManager();
+            txt_IdPelangganNum.Text = Utils.DisplayMaxID(s_PelangganManager.GetMaxIDPelanggan().Substring(s_PelangganManager.GetMaxIDPelanggan().IndexOf("-")));
             DisplayPelanggan();
         }
 
@@ -28,10 +29,11 @@ namespace GrazieeProject.View
         {
             if (txt_NamaPelanggan.TextLength > 0 && txt_AlamatPelanggan.TextLength > 0 && txt_NoTelpPelanggan.TextLength > 0)
             {
-                s_Pelanggan = new Pelanggan(txt_IdPelanggan.Text.ToString(), txt_NamaPelanggan.Text.ToString(), txt_AlamatPelanggan.TextLength.ToString(), txt_NoTelpPelanggan.Text.ToString());
+                s_Pelanggan = new Pelanggan(Utils.ConcatMaxID(txt_IdPelanggan.Text.ToString(), txt_IdPelangganNum.Text.ToString()), txt_NamaPelanggan.Text.ToString(), txt_AlamatPelanggan.TextLength.ToString(), txt_NoTelpPelanggan.Text.ToString());
                 if (s_PelangganManager.AddPelanggan(s_Pelanggan))
                 {
                     MessageBox.Show("Data berhasil ditambah");
+                    txt_IdPelangganNum.Text = Utils.DisplayMaxID(s_PelangganManager.GetMaxIDPelanggan().Substring(s_PelangganManager.GetMaxIDPelanggan().IndexOf("-")));
                 }
                 else
                 {
@@ -57,10 +59,11 @@ namespace GrazieeProject.View
 
             if (txt_NamaPelanggan.TextLength > 0 && txt_AlamatPelanggan.TextLength > 0 && txt_NoTelpPelanggan.TextLength > 0)
             {
-                s_Pelanggan = new Pelanggan(txt_IdPelanggan.Text.ToString(), txt_NamaPelanggan.Text.ToString(), txt_AlamatPelanggan.TextLength.ToString(), txt_NoTelpPelanggan.Text.ToString());
+                s_Pelanggan = new Pelanggan(Utils.ConcatMaxID(txt_IdPelanggan.Text.ToString(), txt_IdPelangganNum.Text.ToString()), txt_NamaPelanggan.Text.ToString(), txt_AlamatPelanggan.TextLength.ToString(), txt_NoTelpPelanggan.Text.ToString());
                 if (s_PelangganManager.UpdatePelanggan(s_Pelanggan))
                 {
                     MessageBox.Show("Data berhasil diubah");
+                    txt_IdPelangganNum.Text = Utils.DisplayMaxID(s_PelangganManager.GetMaxIDPelanggan().Substring(s_PelangganManager.GetMaxIDPelanggan().IndexOf("-")));
                 }
                 else
                 {
@@ -77,10 +80,11 @@ namespace GrazieeProject.View
         {
             if (txt_NamaPelanggan.TextLength > 0 && txt_AlamatPelanggan.TextLength > 0 && txt_NoTelpPelanggan.TextLength > 0)
             {
-                s_Pelanggan = new Pelanggan(txt_IdPelanggan.Text.ToString(), txt_NamaPelanggan.Text.ToString(), txt_AlamatPelanggan.TextLength.ToString(), txt_NoTelpPelanggan.Text.ToString());
+                s_Pelanggan = new Pelanggan(Utils.ConcatMaxID(txt_IdPelanggan.Text.ToString(), txt_IdPelangganNum.Text.ToString()), txt_NamaPelanggan.Text.ToString(), txt_AlamatPelanggan.TextLength.ToString(), txt_NoTelpPelanggan.Text.ToString());
                 if (s_PelangganManager.DeletePelanggan(s_Pelanggan))
                 {
                     MessageBox.Show("Data berhasil dihapus");
+                    txt_IdPelangganNum.Text = Utils.DisplayMaxID(s_PelangganManager.GetMaxIDPelanggan().Substring(s_PelangganManager.GetMaxIDPelanggan().IndexOf("-")));
                 }
                 else
                 {
@@ -102,6 +106,7 @@ namespace GrazieeProject.View
                 if (s_PelangganManager.RestoreData())
                 {
                     MessageBox.Show("Data berhasil dipulihkan");
+                    txt_IdPelangganNum.Text = Utils.DisplayMaxID(s_PelangganManager.GetMaxIDPelanggan().Substring(s_PelangganManager.GetMaxIDPelanggan().IndexOf("-")));
                 }
                 else
                 {
@@ -121,11 +126,12 @@ namespace GrazieeProject.View
             if (dialogResult == DialogResult.Yes)
             {
                 s_Pelanggan = new Pelanggan();
-                s_Pelanggan.Id_pelanggan = txt_IdPelanggan.Text.ToString();
+                s_Pelanggan.Id_pelanggan = Utils.ConcatMaxID(txt_IdPelanggan.Text.ToString(), txt_IdPelangganNum.Text.ToString());
 
                 if (s_PelangganManager.DeletePelangganPermanen(s_Pelanggan))
                 {
                     MessageBox.Show("Data berhasil dihapus permanen");
+                    txt_IdPelangganNum.Text = Utils.DisplayMaxID(s_PelangganManager.GetMaxIDPelanggan().Substring(s_PelangganManager.GetMaxIDPelanggan().IndexOf("-")));
                 }
                 else
                 {
@@ -152,7 +158,7 @@ namespace GrazieeProject.View
                 int currentRow = int.Parse(e.RowIndex.ToString());
                 if (e.RowIndex > -1)
                 {
-                    txt_IdPelanggan.Text = dg_DisplayPelanggan[0, currentRow].Value.ToString();
+                    txt_IdPelanggan.Text = dg_DisplayPelanggan[0, currentRow].Value.ToString().Substring(dg_DisplayPelanggan[0, currentRow].Value.ToString().IndexOf("-"));
                     txt_NamaPelanggan.Text = dg_DisplayPelanggan[1, currentRow].Value.ToString();
                     txt_AlamatPelanggan.Text = dg_DisplayPelanggan[2, currentRow].Value.ToString();
                     txt_NoTelpPelanggan.Text = dg_DisplayPelanggan[3, currentRow].Value.ToString();

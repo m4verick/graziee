@@ -21,6 +21,7 @@ namespace GrazieeProject.View
         {
             InitializeComponent();
             s_SupplierManager = new SupplierManager();
+            txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
             DisplaySupplier();
         }
 
@@ -28,10 +29,11 @@ namespace GrazieeProject.View
         {
             if (txt_NamaSupplier.TextLength > 0 && txt_AlamatSupplier.TextLength > 0 && txt_NoTelpSupplier.TextLength > 0)
             {
-                s_Supplier = new Supplier(txt_IdSupplier.Text.ToString(), txt_NamaSupplier.Text.ToString(), txt_AlamatSupplier.TextLength.ToString(), txt_NoTelpSupplier.Text.ToString());
+                s_Supplier = new Supplier(Utils.ConcatMaxID(txt_IdSupplier.Text.ToString(),txt_IdSupplierNum.Text.ToString()), txt_NamaSupplier.Text.ToString(), txt_AlamatSupplier.TextLength.ToString(), txt_NoTelpSupplier.Text.ToString());
                 if (s_SupplierManager.AddSupplier(s_Supplier))
                 {
                     MessageBox.Show("Data berhasil ditambah");
+                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
                 }
                 else
                 {
@@ -48,10 +50,11 @@ namespace GrazieeProject.View
         {
             if (txt_NamaSupplier.TextLength > 0 && txt_AlamatSupplier.TextLength > 0 && txt_NoTelpSupplier.TextLength > 0)
             {
-                s_Supplier = new Supplier(txt_IdSupplier.Text.ToString(), txt_NamaSupplier.Text.ToString(), txt_AlamatSupplier.TextLength.ToString(), txt_NoTelpSupplier.Text.ToString());
+                s_Supplier = new Supplier(Utils.ConcatMaxID(txt_IdSupplier.Text.ToString(), txt_IdSupplierNum.Text.ToString()), txt_NamaSupplier.Text.ToString(), txt_AlamatSupplier.TextLength.ToString(), txt_NoTelpSupplier.Text.ToString());
                 if (s_SupplierManager.UpdateSupplier(s_Supplier))
                 {
                     MessageBox.Show("Data berhasil ditambah");
+                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
                 }
                 else
                 {
@@ -68,10 +71,11 @@ namespace GrazieeProject.View
         {
             if (txt_NamaSupplier.TextLength > 0 && txt_AlamatSupplier.TextLength > 0 && txt_NoTelpSupplier.TextLength > 0)
             {
-                s_Supplier = new Supplier(txt_IdSupplier.Text.ToString(), txt_NamaSupplier.Text.ToString(), txt_AlamatSupplier.TextLength.ToString(), txt_NoTelpSupplier.Text.ToString());
+                s_Supplier = new Supplier(Utils.ConcatMaxID(txt_IdSupplier.Text.ToString(), txt_IdSupplierNum.Text.ToString()), txt_NamaSupplier.Text.ToString(), txt_AlamatSupplier.TextLength.ToString(), txt_NoTelpSupplier.Text.ToString());
                 if (s_SupplierManager.DeleteSupplier(s_Supplier))
-                {
+                {                    
                     MessageBox.Show("Data berhasil ditambah");
+                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
                 }
                 else
                 {
@@ -91,11 +95,12 @@ namespace GrazieeProject.View
             if (dialogResult == DialogResult.Yes)
             {
                 s_Supplier = new Supplier();
-                s_Supplier.Id_supplier = txt_IdSupplier.Text.ToString();
+                s_Supplier.Id_supplier = Utils.ConcatMaxID(txt_IdSupplier.Text.ToString(), txt_IdSupplierNum.Text.ToString());
 
                 if (s_SupplierManager.DeleteSupplierPermanen(s_Supplier))
                 {
                     MessageBox.Show("Data berhasil dihapus permanen");
+                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
                 }
                 else
                 {
@@ -117,6 +122,7 @@ namespace GrazieeProject.View
                 if (s_SupplierManager.RestoreData())
                 {
                     MessageBox.Show("Data berhasil dipulihkan");
+                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
                 }
                 else
                 {
@@ -143,7 +149,7 @@ namespace GrazieeProject.View
                 int currentRow = int.Parse(e.RowIndex.ToString());
                 if (e.RowIndex > -1)
                 {
-                    txt_IdSupplier.Text = dg_DisplaySupplier[0, currentRow].Value.ToString();
+                    txt_IdSupplierNum.Text = dg_DisplaySupplier[0, currentRow].Value.ToString().Substring(dg_DisplaySupplier[0, currentRow].Value.ToString().IndexOf("-"));
                     txt_NamaSupplier.Text = dg_DisplaySupplier[1, currentRow].Value.ToString();
                     txt_AlamatSupplier.Text = dg_DisplaySupplier[2, currentRow].Value.ToString();
                     txt_NoTelpSupplier.Text = dg_DisplaySupplier[3, currentRow].Value.ToString();

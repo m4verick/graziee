@@ -135,6 +135,35 @@ namespace GrazieeProject.Control
             }
             return dataSet;
         }
+
+        public DataSet GetDataWarnaComboBox()
+        {
+            dataSet = new DataSet();
+            query = string.Empty;
+            query = "SELECT id_warna, nama_warna FROM warna_barang";
+
+            try
+            {
+                connect.Open();
+                adapt = new MySqlDataAdapter(query, connect);
+                adapt.Fill(dataSet);
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                return null;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dataSet;
+        }
         #endregion
 
         #region MerekBarang
@@ -221,6 +250,35 @@ namespace GrazieeProject.Control
             dataSet = new DataSet();
             query = string.Empty;
             query = "SELECT * FROM merek_barang";
+
+            try
+            {
+                connect.Open();
+                adapt = new MySqlDataAdapter(query, connect);
+                adapt.Fill(dataSet);
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                return null;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dataSet;
+        }
+
+        public DataSet GetDataMerekComboBox()
+        {
+            dataSet = new DataSet();
+            query = string.Empty;
+            query = "SELECT id_merek_barang, nama_merek FROM merek_barang";
 
             try
             {
@@ -353,6 +411,35 @@ namespace GrazieeProject.Control
             }
             return dataSet;
         }
+
+        public DataSet GetDataModelComboBox()
+        {
+            dataSet = new DataSet();
+            query = string.Empty;
+            query = "SELECT id_model_barang, nama_model FROM model_barang";
+
+            try
+            {
+                connect.Open();
+                adapt = new MySqlDataAdapter(query, connect);
+                adapt.Fill(dataSet);
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                return null;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dataSet;
+        }
         #endregion
 
         #region UkuranBarang
@@ -439,6 +526,35 @@ namespace GrazieeProject.Control
             dataSet = new DataSet();
             query = string.Empty;
             query = "SELECT * FROM ukuran_barang";
+
+            try
+            {
+                connect.Open();
+                adapt = new MySqlDataAdapter(query, connect);
+                adapt.Fill(dataSet);
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                return null;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dataSet;
+        }
+
+        public DataSet GetDataUkuranComboBox()
+        {
+            dataSet = new DataSet();
+            query = string.Empty;
+            query = "SELECT id_ukuran_barang, ukuran FROM ukuran_barang";
 
             try
             {

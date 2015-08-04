@@ -44,6 +44,7 @@
             this.lblIdPelanggan = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dg_DisplayPelanggan = new System.Windows.Forms.DataGridView();
+            this.txt_IdPelangganNum = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplayPelanggan)).BeginInit();
@@ -51,6 +52,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_IdPelangganNum);
             this.groupBox1.Controls.Add(this.btn_PulihkanData);
             this.groupBox1.Controls.Add(this.btn_HapusPermanen);
             this.groupBox1.Controls.Add(this.btn_DeletePelanggan);
@@ -125,21 +127,21 @@
             // 
             this.txt_NoTelpPelanggan.Location = new System.Drawing.Point(183, 182);
             this.txt_NoTelpPelanggan.Name = "txt_NoTelpPelanggan";
-            this.txt_NoTelpPelanggan.Size = new System.Drawing.Size(100, 20);
+            this.txt_NoTelpPelanggan.Size = new System.Drawing.Size(115, 20);
             this.txt_NoTelpPelanggan.TabIndex = 7;
             // 
             // txt_AlamatPelanggan
             // 
             this.txt_AlamatPelanggan.Location = new System.Drawing.Point(188, 136);
             this.txt_AlamatPelanggan.Name = "txt_AlamatPelanggan";
-            this.txt_AlamatPelanggan.Size = new System.Drawing.Size(100, 20);
+            this.txt_AlamatPelanggan.Size = new System.Drawing.Size(110, 20);
             this.txt_AlamatPelanggan.TabIndex = 6;
             // 
             // txt_NamaPelanggan
             // 
             this.txt_NamaPelanggan.Location = new System.Drawing.Point(186, 90);
             this.txt_NamaPelanggan.Name = "txt_NamaPelanggan";
-            this.txt_NamaPelanggan.Size = new System.Drawing.Size(100, 20);
+            this.txt_NamaPelanggan.Size = new System.Drawing.Size(112, 20);
             this.txt_NamaPelanggan.TabIndex = 5;
             // 
             // txt_IdPelanggan
@@ -147,8 +149,9 @@
             this.txt_IdPelanggan.Location = new System.Drawing.Point(186, 56);
             this.txt_IdPelanggan.Name = "txt_IdPelanggan";
             this.txt_IdPelanggan.ReadOnly = true;
-            this.txt_IdPelanggan.Size = new System.Drawing.Size(100, 20);
+            this.txt_IdPelanggan.Size = new System.Drawing.Size(52, 20);
             this.txt_IdPelanggan.TabIndex = 4;
+            this.txt_IdPelanggan.Text = "PLG-";
             // 
             // lblNoTelp
             // 
@@ -205,6 +208,14 @@
             this.dg_DisplayPelanggan.TabIndex = 0;
             this.dg_DisplayPelanggan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_DisplayPelanggan_CellClick);
             // 
+            // txt_IdPelangganNum
+            // 
+            this.txt_IdPelangganNum.Location = new System.Drawing.Point(244, 56);
+            this.txt_IdPelangganNum.Name = "txt_IdPelangganNum";
+            this.txt_IdPelangganNum.ReadOnly = true;
+            this.txt_IdPelangganNum.Size = new System.Drawing.Size(54, 20);
+            this.txt_IdPelangganNum.TabIndex = 13;
+            // 
             // PelangganUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,5 +252,6 @@
         private System.Windows.Forms.DataGridView dg_DisplayPelanggan;
         private System.Windows.Forms.Button btn_PulihkanData;
         private System.Windows.Forms.Button btn_HapusPermanen;
+        private System.Windows.Forms.TextBox txt_IdPelangganNum;
     }
 }
