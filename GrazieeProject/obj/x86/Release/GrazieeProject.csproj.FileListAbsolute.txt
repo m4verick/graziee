@@ -1,0 +1,8 @@
+C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Release\GrazieeProject.exe
+C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Release\GrazieeProject.pdb
+C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.Form1.resources
+C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.Properties.Resources.resources
+C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.csproj.GenerateResource.Cache
+C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.exe
+C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.pdb
+C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.csprojResolveAssemblyReference.cache

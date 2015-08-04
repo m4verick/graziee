@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8EAC1790-FA0D-4E41-A65B-6FDDBF012D11}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrazieeProject</RootNamespace>
+    <AssemblyName>GrazieeProject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\BarangManager.cs" />
+    <Compile Include="Control\ConnectStrings.cs" />
+    <Compile Include="Control\JenisSubJenisManager.cs" />
+    <Compile Include="Control\KurirManager.cs" />
+    <Compile Include="Control\PelangganManager.cs" />
+    <Compile Include="Control\SupplierManager.cs" />
+    <Compile Include="Control\TRPembelianManager.cs" />
+    <Compile Include="Control\TRPenjualanManager.cs" />
+    <Compile Include="Control\UserSistemManager.cs" />
+    <Compile Include="Control\WarnaMerekModelUkuranManager.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Barang.cs" />
+    <Compile Include="Model\DetailTRPembelian.cs" />
+    <Compile Include="Model\DetailTRPenjualan.cs" />
+    <Compile Include="Model\JenisBarang.cs" />
+    <Compile Include="Model\JenisSubJenis.cs" />
+    <Compile Include="Model\Kurir.cs" />
+    <Compile Include="Model\MerekBarang.cs" />
+    <Compile Include="Model\ModelBarang.cs" />
+    <Compile Include="Model\Pelanggan.cs" />
+    <Compile Include="Model\SubJenisBarang.cs" />
+    <Compile Include="Model\Supplier.cs" />
+    <Compile Include="Model\TransaksiPembelian.cs" />
+    <Compile Include="Model\TransaksiPenjualan.cs" />
+    <Compile Include="Model\UkuranBarang.cs" />
+    <Compile Include="Model\UserSistem.cs" />
+    <Compile Include="Model\WarnaBarang.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AboutUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AboutUI.Designer.cs">
+      <DependentUpon>AboutUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BarangUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BarangUI.Designer.cs">
+      <DependentUpon>BarangUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\KurirUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\KurirUI.Designer.cs">
+      <DependentUpon>KurirUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainUI.Designer.cs">
+      <DependentUpon>MainUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MerekBarangUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MerekBarangUI.Designer.cs">
+      <DependentUpon>MerekBarangUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModelBarangUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ModelBarangUI.Designer.cs">
+      <DependentUpon>ModelBarangUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PelangganUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PelangganUI.Designer.cs">
+      <DependentUpon>PelangganUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SupplierUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SupplierUI.Designer.cs">
+      <DependentUpon>SupplierUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TransaksiPembelianUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TransaksiPembelianUI.Designer.cs">
+      <DependentUpon>TransaksiPembelianUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TransaksiPenjualanUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TransaksiPenjualanUI.Designer.cs">
+      <DependentUpon>TransaksiPenjualanUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UkuranBarangUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UkuranBarangUI.Designer.cs">
+      <DependentUpon>UkuranBarangUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserSistemUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UserSistemUI.Designer.cs">
+      <DependentUpon>UserSistemUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WarnaBarangUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WarnaBarangUI.Designer.cs">
+      <DependentUpon>WarnaBarangUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\AboutUI.resx">
+      <DependentUpon>AboutUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BarangUI.resx">
+      <DependentUpon>BarangUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\KurirUI.resx">
+      <DependentUpon>KurirUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainUI.resx">
+      <DependentUpon>MainUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MerekBarangUI.resx">
+      <DependentUpon>MerekBarangUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ModelBarangUI.resx">
+      <DependentUpon>ModelBarangUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PelangganUI.resx">
+      <DependentUpon>PelangganUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SupplierUI.resx">
+      <DependentUpon>SupplierUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TransaksiPembelianUI.resx">
+      <DependentUpon>TransaksiPembelianUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TransaksiPenjualanUI.resx">
+      <DependentUpon>TransaksiPenjualanUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UkuranBarangUI.resx">
+      <DependentUpon>UkuranBarangUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserSistemUI.resx">
+      <DependentUpon>UserSistemUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WarnaBarangUI.resx">
+      <DependentUpon>WarnaBarangUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
