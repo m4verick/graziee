@@ -16,10 +16,13 @@ namespace GrazieeProject.View
         UserSistem s_userSistem;
         UserSistemManager s_userSistemManager;
 
+        KurirManager s_KurirManager;
+
         public LoginUI()
         {
             InitializeComponent();
             s_userSistemManager = new UserSistemManager();
+            s_KurirManager = new KurirManager();
         }
 
         private void btn_Login_Click(object sender, EventArgs e)
@@ -30,6 +33,9 @@ namespace GrazieeProject.View
                 if (s_userSistemManager.ValidateLogin(s_userSistem))
                 {
                     MessageBox.Show("Login berhasil");
+                    //string test = s_KurirManager.GetMaxIDKurir();
+                    //int testing = int.Parse(test.Substring(4));
+                    //MessageBox.Show(testing.ToString());
                     this.Hide();
                     MainUI s_mainUI = new MainUI();
                     s_mainUI.Show();

@@ -44,6 +44,7 @@
             this.lblNamaPelanggan = new System.Windows.Forms.Label();
             this.lblIdPelanggan = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIdKurirNum = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplayKurir)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -101,32 +102,33 @@
             // 
             // txt_NoTelpKurir
             // 
-            this.txt_NoTelpKurir.Location = new System.Drawing.Point(202, 182);
+            this.txt_NoTelpKurir.Location = new System.Drawing.Point(149, 182);
             this.txt_NoTelpKurir.Name = "txt_NoTelpKurir";
-            this.txt_NoTelpKurir.Size = new System.Drawing.Size(100, 20);
+            this.txt_NoTelpKurir.Size = new System.Drawing.Size(153, 20);
             this.txt_NoTelpKurir.TabIndex = 7;
             // 
             // txt_AlamatKurir
             // 
-            this.txt_AlamatKurir.Location = new System.Drawing.Point(207, 136);
+            this.txt_AlamatKurir.Location = new System.Drawing.Point(149, 136);
             this.txt_AlamatKurir.Name = "txt_AlamatKurir";
-            this.txt_AlamatKurir.Size = new System.Drawing.Size(100, 20);
+            this.txt_AlamatKurir.Size = new System.Drawing.Size(158, 20);
             this.txt_AlamatKurir.TabIndex = 6;
             // 
             // txt_NamaKurir
             // 
-            this.txt_NamaKurir.Location = new System.Drawing.Point(205, 90);
+            this.txt_NamaKurir.Location = new System.Drawing.Point(149, 90);
             this.txt_NamaKurir.Name = "txt_NamaKurir";
-            this.txt_NamaKurir.Size = new System.Drawing.Size(100, 20);
+            this.txt_NamaKurir.Size = new System.Drawing.Size(156, 20);
             this.txt_NamaKurir.TabIndex = 5;
             // 
             // txt_IdKurir
             // 
-            this.txt_IdKurir.Location = new System.Drawing.Point(205, 56);
+            this.txt_IdKurir.Location = new System.Drawing.Point(149, 56);
             this.txt_IdKurir.Name = "txt_IdKurir";
             this.txt_IdKurir.ReadOnly = true;
-            this.txt_IdKurir.Size = new System.Drawing.Size(100, 20);
+            this.txt_IdKurir.Size = new System.Drawing.Size(75, 20);
             this.txt_IdKurir.TabIndex = 4;
+            this.txt_IdKurir.Text = "KUR-";
             // 
             // groupBox2
             // 
@@ -185,6 +187,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtIdKurirNum);
             this.groupBox1.Controls.Add(this.btn_PulihkanData);
             this.groupBox1.Controls.Add(this.btn_HapusPermanen);
             this.groupBox1.Controls.Add(this.btn_DeleteKurir);
@@ -204,6 +207,14 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Data";
+            // 
+            // txtIdKurirNum
+            // 
+            this.txtIdKurirNum.Location = new System.Drawing.Point(232, 56);
+            this.txtIdKurirNum.Name = "txtIdKurirNum";
+            this.txtIdKurirNum.ReadOnly = true;
+            this.txtIdKurirNum.Size = new System.Drawing.Size(73, 20);
+            this.txtIdKurirNum.TabIndex = 13;
             // 
             // KurirUI
             // 
@@ -241,6 +252,7 @@
         private System.Windows.Forms.Label lblNamaPelanggan;
         private System.Windows.Forms.Label lblIdPelanggan;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtIdKurirNum;
 
     }
 }

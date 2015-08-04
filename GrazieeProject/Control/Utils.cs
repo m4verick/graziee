@@ -101,5 +101,32 @@ namespace GrazieeProject.Control
             //return the Clear decrypted TEXT
             return UTF8Encoding.UTF8.GetString(resultArray);
         }
+
+        public string DisplayMaxID(string num)
+        {
+            int numId;
+            if (!num.Equals(String.Empty))
+            {
+                numId = int.Parse(num) + 1;
+
+                if (numId.ToString().Length == 1) return String.Concat("000", numId.ToString());
+                else if (numId.ToString().Length == 2) return String.Concat("00", numId.ToString());
+                else if (numId.ToString().Length == 3) return String.Concat("0", numId.ToString());
+                else if (numId.ToString().Length == 4) return numId.ToString();
+                else return "undefined";
+            }
+            return "undefined";
+        }
+
+        public string ConcatMaxID(string letter, string num)
+        {
+            string concatID;
+            if (!letter.Equals(String.Empty) && !num.Equals(String.Empty))
+            {
+                concatID = String.Concat(letter, num);
+                return concatID;
+            }
+            return "undefined";
+        }
     }
 }

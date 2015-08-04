@@ -42,3 +42,4 @@ D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.csproj.GenerateResource.Cache
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Debug\GrazieeProject.exe
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Debug\GrazieeProject.pdb
+D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Debug\GrazieeProject.exe.config
