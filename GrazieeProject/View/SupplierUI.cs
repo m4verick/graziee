@@ -136,7 +136,7 @@ namespace GrazieeProject.View
             dg_DisplaySupplier.DataSource = s_BindingSupplier;
         }
 
-        private void dg_DisplaySupplier_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dg_DisplaySupplier_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {

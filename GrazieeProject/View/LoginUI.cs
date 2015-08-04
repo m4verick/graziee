@@ -44,10 +44,5 @@ namespace GrazieeProject.View
                 MessageBox.Show("Mohon mengisi Nama Pengguna atau Kata Sandi atau keduanya");
             }
         }
-
-        private void btn_Exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

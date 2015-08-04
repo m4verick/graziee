@@ -58,7 +58,6 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tampilan Data";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // dg_DisplaySupplier
             // 
@@ -67,7 +66,7 @@
             this.dg_DisplaySupplier.Name = "dg_DisplaySupplier";
             this.dg_DisplaySupplier.Size = new System.Drawing.Size(355, 372);
             this.dg_DisplaySupplier.TabIndex = 0;
-            this.dg_DisplaySupplier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_DisplaySupplier_CellContentClick);
+            this.dg_DisplaySupplier.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_DisplaySupplier_CellDoubleClick);
             // 
             // groupBox1
             // 
@@ -91,7 +90,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Data";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btn_PulihkanData
             // 
@@ -149,15 +147,13 @@
             this.txt_NoTelpSupplier.Name = "txt_NoTelpSupplier";
             this.txt_NoTelpSupplier.Size = new System.Drawing.Size(100, 20);
             this.txt_NoTelpSupplier.TabIndex = 7;
-            this.txt_NoTelpSupplier.TextChanged += new System.EventHandler(this.txt_NoTelpSupplier_TextChanged);
             // 
             // txt_AlamatSupplier
             // 
-            this.txt_AlamatSupplier.Location = new System.Drawing.Point(207, 136);
+            this.txt_AlamatSupplier.Location = new System.Drawing.Point(205, 136);
             this.txt_AlamatSupplier.Name = "txt_AlamatSupplier";
             this.txt_AlamatSupplier.Size = new System.Drawing.Size(100, 20);
             this.txt_AlamatSupplier.TabIndex = 6;
-            this.txt_AlamatSupplier.TextChanged += new System.EventHandler(this.txt_AlamatSupplier_TextChanged);
             // 
             // txt_NamaSupplier
             // 
@@ -165,7 +161,6 @@
             this.txt_NamaSupplier.Name = "txt_NamaSupplier";
             this.txt_NamaSupplier.Size = new System.Drawing.Size(100, 20);
             this.txt_NamaSupplier.TabIndex = 5;
-            this.txt_NamaSupplier.TextChanged += new System.EventHandler(this.txt_NamaSupplier_TextChanged);
             // 
             // txt_IdSupplier
             // 
@@ -174,7 +169,6 @@
             this.txt_IdSupplier.ReadOnly = true;
             this.txt_IdSupplier.Size = new System.Drawing.Size(100, 20);
             this.txt_IdSupplier.TabIndex = 4;
-            this.txt_IdSupplier.TextChanged += new System.EventHandler(this.txt_IdSupplier_TextChanged);
             // 
             // lblNoTelp
             // 
@@ -184,7 +178,6 @@
             this.lblNoTelp.Size = new System.Drawing.Size(53, 13);
             this.lblNoTelp.TabIndex = 3;
             this.lblNoTelp.Text = "NO TELP";
-            this.lblNoTelp.Click += new System.EventHandler(this.lblNoTelp_Click);
             // 
             // lblAlamatPelanggan
             // 
@@ -194,7 +187,6 @@
             this.lblAlamatPelanggan.Size = new System.Drawing.Size(106, 13);
             this.lblAlamatPelanggan.TabIndex = 2;
             this.lblAlamatPelanggan.Text = "ALAMAT SUPPLIER";
-            this.lblAlamatPelanggan.Click += new System.EventHandler(this.lblAlamatPelanggan_Click);
             // 
             // lblNamaPelanggan
             // 
@@ -204,7 +196,6 @@
             this.lblNamaPelanggan.Size = new System.Drawing.Size(94, 13);
             this.lblNamaPelanggan.TabIndex = 1;
             this.lblNamaPelanggan.Text = "NAMA SUPPLIER";
-            this.lblNamaPelanggan.Click += new System.EventHandler(this.lblNamaPelanggan_Click);
             // 
             // lblIdPelanggan
             // 
@@ -214,7 +205,6 @@
             this.lblIdPelanggan.Size = new System.Drawing.Size(74, 13);
             this.lblIdPelanggan.TabIndex = 0;
             this.lblIdPelanggan.Text = "ID SUPPLIER";
-            this.lblIdPelanggan.Click += new System.EventHandler(this.lblIdPelanggan_Click);
             // 
             // SupplierUI
             // 

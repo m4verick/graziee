@@ -226,7 +226,7 @@
             this.dg_DisplayUserSistem.Name = "dg_DisplayUserSistem";
             this.dg_DisplayUserSistem.Size = new System.Drawing.Size(355, 372);
             this.dg_DisplayUserSistem.TabIndex = 0;
-            this.dg_DisplayUserSistem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_DisplayUserSistem_CellContentClick);
+            //this.dg_DisplayUserSistem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_DisplayUserSistem_CellContentClick);
             // 
             // UserSistemUI
             // 
