@@ -21,7 +21,7 @@ namespace GrazieeProject.View
         {
             InitializeComponent();
             s_KurirManager = new KurirManager();
-            txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(s_KurirManager.GetMaxIDKurir().IndexOf("-")));
+            txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring((s_KurirManager.GetMaxIDKurir().IndexOf("-")) + 1));
             DisplayKurir();
         }
 
@@ -34,7 +34,7 @@ namespace GrazieeProject.View
                 if (s_KurirManager.AddKurir(s_Kurir))
                 {
                     MessageBox.Show("Data berhasil ditambah");
-                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(s_KurirManager.GetMaxIDKurir().IndexOf("-")));
+                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring((s_KurirManager.GetMaxIDKurir().IndexOf("-")) + 1));
                 }
                 else
                 {
@@ -55,7 +55,7 @@ namespace GrazieeProject.View
                 if (s_KurirManager.UpdateKurir(s_Kurir))
                 {
                     MessageBox.Show("Data berhasil diubah");
-                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(s_KurirManager.GetMaxIDKurir().IndexOf("-")));
+                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring((s_KurirManager.GetMaxIDKurir().IndexOf("-")) + 1));
                 }
                 else
                 {
@@ -76,7 +76,7 @@ namespace GrazieeProject.View
                 if (s_KurirManager.DeleteKurir(s_Kurir))
                 {
                     MessageBox.Show("Data berhasil dihapus");
-                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(s_KurirManager.GetMaxIDKurir().IndexOf("-")));
+                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring((s_KurirManager.GetMaxIDKurir().IndexOf("-")) + 1));
                 }
                 else
                 {
@@ -101,7 +101,7 @@ namespace GrazieeProject.View
                 if (s_KurirManager.DeleteKurirPermanen(s_Kurir))
                 {
                     MessageBox.Show("Data berhasil dihapus permanen");
-                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(s_KurirManager.GetMaxIDKurir().IndexOf("-")));
+                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring((s_KurirManager.GetMaxIDKurir().IndexOf("-")) + 1));
                 }
                 else
                 {
@@ -123,7 +123,7 @@ namespace GrazieeProject.View
                 if (s_KurirManager.RestoreData())
                 {
                     MessageBox.Show("Data berhasil dipulihkan");
-                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring(s_KurirManager.GetMaxIDKurir().IndexOf("-")));
+                    txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring((s_KurirManager.GetMaxIDKurir().IndexOf("-")) + 1));
                 }
                 else
                 {
@@ -150,7 +150,7 @@ namespace GrazieeProject.View
                 int currentRow = int.Parse(e.RowIndex.ToString());
                 if (e.RowIndex > -1)
                 {
-                    txt_IdKurirNum.Text = dg_DisplayKurir[0, currentRow].Value.ToString().Substring(dg_DisplayKurir[0, currentRow].Value.ToString().IndexOf("-"));
+                    txt_IdKurirNum.Text = dg_DisplayKurir[0, currentRow].Value.ToString().Substring(dg_DisplayKurir[0, currentRow].Value.ToString().IndexOf("-") + 1);
                     txt_NamaKurir.Text = dg_DisplayKurir[1, currentRow].Value.ToString();
                     txt_AlamatKurir.Text = dg_DisplayKurir[2, currentRow].Value.ToString();
                     txt_NoTelpKurir.Text = dg_DisplayKurir[3, currentRow].Value.ToString();
