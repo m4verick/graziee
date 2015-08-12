@@ -240,12 +240,12 @@ namespace GrazieeProject.Control
             catch (MySqlException ex)
             {
                 ex.Message.ToString();
-                result = String.Empty;
+                result = Utils.DEFAULT_ID_KURIR;
             }
             catch (Exception exec)
             {
                 exec.Message.ToString();
-                result = String.Empty;
+                result = Utils.DEFAULT_ID_KURIR;
             }
             finally
             {

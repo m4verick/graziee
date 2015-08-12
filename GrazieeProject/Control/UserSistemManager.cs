@@ -220,5 +220,43 @@ namespace GrazieeProject.Control
             }
             return dataSet;
         }
+
+        public string GetMaxIDUserSistem()
+        {
+            string result = String.Empty;
+
+            query = string.Empty;
+            query = "SELECT MAX(id_user_sistem) FROM user_sistem";
+
+            try
+            {
+                connect.Open();
+                cmd = new MySqlCommand(query, connect);
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    result = reader.GetString(0);
+                }
+                else
+                {
+                    result = String.Empty;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                result = Utils.DEFAULT_ID_USER_SISTEM;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                result = Utils.DEFAULT_ID_USER_SISTEM;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return result;
+        }
     }
 }

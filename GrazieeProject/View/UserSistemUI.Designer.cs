@@ -46,6 +46,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dg_DisplayUserSistem = new System.Windows.Forms.DataGridView();
+            this.txt_IdPenggunaSistemNum = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplayUserSistem)).BeginInit();
@@ -101,14 +102,15 @@
             this.txt_IdPenggunaSistem.Location = new System.Drawing.Point(167, 30);
             this.txt_IdPenggunaSistem.Name = "txt_IdPenggunaSistem";
             this.txt_IdPenggunaSistem.ReadOnly = true;
-            this.txt_IdPenggunaSistem.Size = new System.Drawing.Size(100, 20);
+            this.txt_IdPenggunaSistem.Size = new System.Drawing.Size(49, 20);
             this.txt_IdPenggunaSistem.TabIndex = 5;
+            this.txt_IdPenggunaSistem.Text = "USER-";
             // 
             // txt_NamaPengguna
             // 
             this.txt_NamaPengguna.Location = new System.Drawing.Point(167, 64);
             this.txt_NamaPengguna.Name = "txt_NamaPengguna";
-            this.txt_NamaPengguna.Size = new System.Drawing.Size(100, 20);
+            this.txt_NamaPengguna.Size = new System.Drawing.Size(121, 20);
             this.txt_NamaPengguna.TabIndex = 6;
             // 
             // txt_KataSandi
@@ -116,7 +118,7 @@
             this.txt_KataSandi.Location = new System.Drawing.Point(167, 90);
             this.txt_KataSandi.Name = "txt_KataSandi";
             this.txt_KataSandi.PasswordChar = '*';
-            this.txt_KataSandi.Size = new System.Drawing.Size(100, 20);
+            this.txt_KataSandi.Size = new System.Drawing.Size(121, 20);
             this.txt_KataSandi.TabIndex = 7;
             // 
             // txt_UlangiKataSandi
@@ -124,7 +126,7 @@
             this.txt_UlangiKataSandi.Location = new System.Drawing.Point(167, 130);
             this.txt_UlangiKataSandi.Name = "txt_UlangiKataSandi";
             this.txt_UlangiKataSandi.PasswordChar = '*';
-            this.txt_UlangiKataSandi.Size = new System.Drawing.Size(100, 20);
+            this.txt_UlangiKataSandi.Size = new System.Drawing.Size(121, 20);
             this.txt_UlangiKataSandi.TabIndex = 8;
             // 
             // cmb_Role
@@ -187,6 +189,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_IdPenggunaSistemNum);
             this.groupBox1.Controls.Add(this.btn_RestoreUserSistem);
             this.groupBox1.Controls.Add(this.btn_DeletePermanenUserSistem);
             this.groupBox1.Controls.Add(this.btn_DeleteUserSistem);
@@ -226,7 +229,14 @@
             this.dg_DisplayUserSistem.Name = "dg_DisplayUserSistem";
             this.dg_DisplayUserSistem.Size = new System.Drawing.Size(355, 372);
             this.dg_DisplayUserSistem.TabIndex = 0;
-            //this.dg_DisplayUserSistem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_DisplayUserSistem_CellContentClick);
+            // 
+            // txt_IdPenggunaSistemNum
+            // 
+            this.txt_IdPenggunaSistemNum.Location = new System.Drawing.Point(222, 30);
+            this.txt_IdPenggunaSistemNum.Name = "txt_IdPenggunaSistemNum";
+            this.txt_IdPenggunaSistemNum.ReadOnly = true;
+            this.txt_IdPenggunaSistemNum.Size = new System.Drawing.Size(66, 20);
+            this.txt_IdPenggunaSistemNum.TabIndex = 15;
             // 
             // UserSistemUI
             // 
@@ -265,6 +275,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dg_DisplayUserSistem;
+        private System.Windows.Forms.TextBox txt_IdPenggunaSistemNum;
 
 
     }
