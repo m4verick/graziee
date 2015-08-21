@@ -42,5 +42,28 @@ namespace GrazieeProject.View
             ModelBarangUI s_ModelBarangUI = new ModelBarangUI();
             s_ModelBarangUI.Show();
         }
+
+        private void generateBarcode()
+        {
+            // Create an linear barcode object (BarcodeLib.Barcode.Linear)
+            BarcodeLib.Barcode.Linear barcode = new BarcodeLib.Barcode.Linear();
+
+            // Set barcode type to Code 39
+            barcode.Type = BarcodeLib.Barcode.BarcodeType.CODE39;
+
+            // Set your encoded barcode value
+            barcode.Data = "123456789";
+
+            // Other barcode settings
+            // Save barcode image into your system
+
+            // Draw barcode image into a PNG file
+            pb_BarcodeImage.Image = barcode.drawBarcode();
+        }
+
+        private void btn_AddBarang_Click(object sender, EventArgs e)
+        {
+            generateBarcode();
+        } 
     }
 }

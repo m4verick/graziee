@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_IdBarangIncr = new System.Windows.Forms.TextBox();
             this.btn_SearchJenisSubJenis = new System.Windows.Forms.Button();
             this.btn_SearchModelBarang = new System.Windows.Forms.Button();
             this.btn_SearchWarnaBarang = new System.Windows.Forms.Button();
@@ -56,12 +57,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_IdBarangIncr = new System.Windows.Forms.TextBox();
+            this.pb_BarcodeImage = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_BarcodeImage)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pb_BarcodeImage);
             this.groupBox1.Controls.Add(this.txt_IdBarangIncr);
             this.groupBox1.Controls.Add(this.btn_SearchJenisSubJenis);
             this.groupBox1.Controls.Add(this.btn_SearchModelBarang);
@@ -92,10 +95,18 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(546, 422);
+            this.groupBox1.Size = new System.Drawing.Size(606, 435);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Data";
+            // 
+            // txt_IdBarangIncr
+            // 
+            this.txt_IdBarangIncr.Location = new System.Drawing.Point(280, 39);
+            this.txt_IdBarangIncr.Name = "txt_IdBarangIncr";
+            this.txt_IdBarangIncr.ReadOnly = true;
+            this.txt_IdBarangIncr.Size = new System.Drawing.Size(42, 20);
+            this.txt_IdBarangIncr.TabIndex = 27;
             // 
             // btn_SearchJenisSubJenis
             // 
@@ -163,6 +174,7 @@
             this.btn_AddBarang.TabIndex = 20;
             this.btn_AddBarang.Text = "Tambah Data";
             this.btn_AddBarang.UseVisualStyleBackColor = true;
+            this.btn_AddBarang.Click += new System.EventHandler(this.btn_AddBarang_Click);
             // 
             // radio_StatusStokLunas
             // 
@@ -346,13 +358,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID BARANG";
             // 
-            // txt_IdBarangIncr
+            // pb_BarcodeImage
             // 
-            this.txt_IdBarangIncr.Location = new System.Drawing.Point(280, 39);
-            this.txt_IdBarangIncr.Name = "txt_IdBarangIncr";
-            this.txt_IdBarangIncr.ReadOnly = true;
-            this.txt_IdBarangIncr.Size = new System.Drawing.Size(42, 20);
-            this.txt_IdBarangIncr.TabIndex = 27;
+            this.pb_BarcodeImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pb_BarcodeImage.Location = new System.Drawing.Point(386, 240);
+            this.pb_BarcodeImage.Name = "pb_BarcodeImage";
+            this.pb_BarcodeImage.Size = new System.Drawing.Size(205, 161);
+            this.pb_BarcodeImage.TabIndex = 28;
+            this.pb_BarcodeImage.TabStop = false;
             // 
             // BarangUI
             // 
@@ -364,6 +377,7 @@
             this.Text = "Pengelolaan Barang";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_BarcodeImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -399,5 +413,6 @@
         private System.Windows.Forms.Button btn_SearchMerekBarang;
         private System.Windows.Forms.Button btn_SearchSupplier;
         private System.Windows.Forms.TextBox txt_IdBarangIncr;
+        private System.Windows.Forms.PictureBox pb_BarcodeImage;
     }
 }
