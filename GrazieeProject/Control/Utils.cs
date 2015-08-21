@@ -9,6 +9,10 @@ namespace GrazieeProject.Control
 {
     class Utils
     {
+        public static string DEFAULT_ID_SUPPLIER        = "SUPP-0000";
+        public static string DEFAULT_ID_KURIR           = "KUR-0000";
+        public static string DEFAULT_ID_USER_SISTEM     = "USER-0000";
+
         public static string PassEncrypt(string toEncrypt, bool useHashing)
         {
             byte[] keyArray;

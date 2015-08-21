@@ -21,7 +21,7 @@ namespace GrazieeProject.View
         {
             InitializeComponent();
             s_SupplierManager = new SupplierManager();
-            txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
+            txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-") + 1));
             DisplaySupplier();
         }
 
@@ -33,7 +33,7 @@ namespace GrazieeProject.View
                 if (s_SupplierManager.AddSupplier(s_Supplier))
                 {
                     MessageBox.Show("Data berhasil ditambah");
-                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
+                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-") + 1));
                 }
                 else
                 {
@@ -54,7 +54,7 @@ namespace GrazieeProject.View
                 if (s_SupplierManager.UpdateSupplier(s_Supplier))
                 {
                     MessageBox.Show("Data berhasil ditambah");
-                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
+                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-") + 1));
                 }
                 else
                 {
@@ -75,7 +75,7 @@ namespace GrazieeProject.View
                 if (s_SupplierManager.DeleteSupplier(s_Supplier))
                 {                    
                     MessageBox.Show("Data berhasil ditambah");
-                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
+                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-") + 1));
                 }
                 else
                 {
@@ -100,7 +100,7 @@ namespace GrazieeProject.View
                 if (s_SupplierManager.DeleteSupplierPermanen(s_Supplier))
                 {
                     MessageBox.Show("Data berhasil dihapus permanen");
-                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
+                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-") + 1));
                 }
                 else
                 {
@@ -122,7 +122,7 @@ namespace GrazieeProject.View
                 if (s_SupplierManager.RestoreData())
                 {
                     MessageBox.Show("Data berhasil dipulihkan");
-                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-")));
+                    txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-") + 1));
                 }
                 else
                 {
@@ -149,7 +149,7 @@ namespace GrazieeProject.View
                 int currentRow = int.Parse(e.RowIndex.ToString());
                 if (e.RowIndex > -1)
                 {
-                    txt_IdSupplierNum.Text = dg_DisplaySupplier[0, currentRow].Value.ToString().Substring(dg_DisplaySupplier[0, currentRow].Value.ToString().IndexOf("-"));
+                    txt_IdSupplierNum.Text = dg_DisplaySupplier[0, currentRow].Value.ToString().Substring(dg_DisplaySupplier[0, currentRow].Value.ToString().IndexOf("-") + 1);
                     txt_NamaSupplier.Text = dg_DisplaySupplier[1, currentRow].Value.ToString();
                     txt_AlamatSupplier.Text = dg_DisplaySupplier[2, currentRow].Value.ToString();
                     txt_NoTelpSupplier.Text = dg_DisplaySupplier[3, currentRow].Value.ToString();
