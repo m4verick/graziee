@@ -30,7 +30,7 @@ namespace GrazieeProject.View
         {
             if (txt_NamaPengguna.TextLength > 0 && txt_KataSandi.TextLength > 0 && txt_UlangiKataSandi.TextLength > 0 && cmb_Role.SelectedIndex != -1)
             {
-                s_userSistem = new UserSistem(txt_IdPenggunaSistem.Text.ToString(), txt_NamaPengguna.Text.ToString(), txt_KataSandi.Text.ToString(), cmb_Role.SelectedItem.ToString());
+                s_userSistem = new UserSistem(txt_IdPenggunaSistem.Text.ToString(), txt_NamaPengguna.Text.ToString(), Utils.PassEncrypt(txt_KataSandi.Text.ToString(), true), cmb_Role.SelectedItem.ToString());
                 if (s_userSistemManager.AddUserSistem(s_userSistem))
                 {
                     MessageBox.Show("Data berhasil ditambah");
@@ -51,7 +51,7 @@ namespace GrazieeProject.View
         {
             if (txt_NamaPengguna.TextLength > 0 && txt_KataSandi.TextLength > 0 && txt_UlangiKataSandi.TextLength > 0 && cmb_Role.SelectedIndex != -1)
             {
-                s_userSistem = new UserSistem(txt_IdPenggunaSistem.Text.ToString(), txt_NamaPengguna.Text.ToString(), txt_KataSandi.Text.ToString(), cmb_Role.SelectedItem.ToString());
+                s_userSistem = new UserSistem(txt_IdPenggunaSistem.Text.ToString(), txt_NamaPengguna.Text.ToString(), Utils.PassEncrypt(txt_KataSandi.Text.ToString(), true), cmb_Role.SelectedItem.ToString());
                 if (s_userSistemManager.UpdateUserSistem(s_userSistem))
                 {
                     MessageBox.Show("Data berhasil diubah");
@@ -72,7 +72,7 @@ namespace GrazieeProject.View
         {
             if (txt_NamaPengguna.TextLength > 0 && txt_KataSandi.TextLength > 0 && txt_UlangiKataSandi.TextLength > 0 && cmb_Role.SelectedIndex != -1)
             {
-                s_userSistem = new UserSistem(txt_IdPenggunaSistem.Text.ToString(), txt_NamaPengguna.Text.ToString(), txt_KataSandi.Text.ToString(), cmb_Role.SelectedItem.ToString());
+                s_userSistem = new UserSistem(txt_IdPenggunaSistem.Text.ToString(), txt_NamaPengguna.Text.ToString(), Utils.PassEncrypt(txt_KataSandi.Text.ToString(), true), cmb_Role.SelectedItem.ToString());
                 if (s_userSistemManager.DeleteUserSistem(s_userSistem))
                 {
                     MessageBox.Show("Data berhasil dihapus");
@@ -152,7 +152,7 @@ namespace GrazieeProject.View
                 {
                     txt_IdPenggunaSistemNum.Text = dg_DisplayUserSistem[0, currentRow].Value.ToString().Substring((dg_DisplayUserSistem[0, currentRow].Value.ToString().IndexOf("-")) + 1);
                     txt_NamaPengguna.Text = dg_DisplayUserSistem[1, currentRow].Value.ToString();
-                    txt_KataSandi.Text = dg_DisplayUserSistem[2, currentRow].Value.ToString();
+                    txt_KataSandi.Text = Utils.PassDecrypt(dg_DisplayUserSistem[2, currentRow].Value.ToString(), true);
                     cmb_Role.Text = dg_DisplayUserSistem[3, currentRow].Value.ToString();
                 }
             }

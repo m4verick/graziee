@@ -12,6 +12,10 @@ namespace GrazieeProject.Control
         public static string DEFAULT_ID_SUPPLIER        = "SUPP-0000";
         public static string DEFAULT_ID_KURIR           = "KUR-0000";
         public static string DEFAULT_ID_USER_SISTEM     = "USER-0000";
+        public static string DEFAULT_ID_WARNA_BARANG    = "WRN-0000";
+        public static string DEFAULT_ID_MEREK_BARANG    = "MRK-0000";
+        public static string DEFAULT_ID_MODEL_BARANG    = "MDL-0000";
+        public static string DEFAULT_ID_UKURAN_BARANG   = "UKR-0000";
 
         public static string PassEncrypt(string toEncrypt, bool useHashing)
         {

@@ -37,7 +37,7 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(101, 167);
+            this.btn_Login.Location = new System.Drawing.Point(111, 124);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(75, 23);
             this.btn_Login.TabIndex = 0;
@@ -47,22 +47,22 @@
             // 
             // txt_Username
             // 
-            this.txt_Username.Location = new System.Drawing.Point(119, 63);
+            this.txt_Username.Location = new System.Drawing.Point(111, 40);
             this.txt_Username.Name = "txt_Username";
-            this.txt_Username.Size = new System.Drawing.Size(100, 20);
+            this.txt_Username.Size = new System.Drawing.Size(149, 20);
             this.txt_Username.TabIndex = 2;
             // 
             // txt_Password
             // 
-            this.txt_Password.Location = new System.Drawing.Point(101, 106);
+            this.txt_Password.Location = new System.Drawing.Point(111, 79);
             this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(100, 20);
+            this.txt_Password.Size = new System.Drawing.Size(149, 20);
             this.txt_Password.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 63);
+            this.label1.Location = new System.Drawing.Point(36, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 4;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 91);
+            this.label2.Location = new System.Drawing.Point(36, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 5;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(311, 177);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Password);

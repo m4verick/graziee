@@ -15,30 +15,24 @@ namespace GrazieeProject.View
     {
         UserSistem s_userSistem;
         UserSistemManager s_userSistemManager;
-
-        KurirManager s_KurirManager;
+        string m_mainRole = String.Empty;
 
         public LoginUI()
         {
             InitializeComponent();
             s_userSistemManager = new UserSistemManager();
-            s_KurirManager = new KurirManager();
         }
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
             if (txt_Username.TextLength > 0 && txt_Password.TextLength > 0)
             {
-                s_userSistem = new UserSistem(txt_Username.Text.ToString(), txt_Password.Text.ToString());
-                if (s_userSistemManager.ValidateLogin(s_userSistem))
+                m_mainRole = s_userSistemManager.GetRoleUserSistem(txt_Username.Text.ToString(), txt_Password.Text.ToString());
+                if (!m_mainRole.Equals(String.Empty))
                 {
-                    generateBarcode();
                     MessageBox.Show("Login berhasil");
-                    //string test = s_KurirManager.GetMaxIDKurir();
-                    //int testing = int.Parse(test.Substring(4));
-                    //MessageBox.Show(testing.ToString());
                     this.Hide();
-                    MainUI s_mainUI = new MainUI();
+                    MainUI s_mainUI = new MainUI(m_mainRole);
                     s_mainUI.Show();
                 }
                 else
@@ -52,6 +46,7 @@ namespace GrazieeProject.View
             }
         }
 
+        /*
         private void generateBarcode()
         {
             // Create an linear barcode object (BarcodeLib.Barcode.Linear)
@@ -69,5 +64,6 @@ namespace GrazieeProject.View
             // Draw barcode image into a PNG file
             barcode.drawBarcode("D:\\barcode.png");
         }
+         */
     }
 }

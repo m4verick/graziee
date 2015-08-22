@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mns_Main = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem_File = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,19 +38,9 @@
             this.pengelolaanPelangganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pengelolaanSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pengelolaanBarangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mns_Main = new System.Windows.Forms.MenuStrip();
             this.mns_Main.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // mns_Main
-            // 
-            this.mns_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem_File,
-            this.pengelolaanToolStripMenuItem});
-            this.mns_Main.Location = new System.Drawing.Point(0, 0);
-            this.mns_Main.Name = "mns_Main";
-            this.mns_Main.Size = new System.Drawing.Size(1008, 24);
-            this.mns_Main.TabIndex = 0;
-            this.mns_Main.Text = "menuStrip1";
             // 
             // toolStripMenuItem_File
             // 
@@ -131,6 +120,17 @@
             this.pengelolaanBarangToolStripMenuItem.Text = "Pengelolaan Barang";
             this.pengelolaanBarangToolStripMenuItem.Click += new System.EventHandler(this.pengelolaanBarangToolStripMenuItem_Click);
             // 
+            // mns_Main
+            // 
+            this.mns_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_File,
+            this.pengelolaanToolStripMenuItem});
+            this.mns_Main.Location = new System.Drawing.Point(0, 0);
+            this.mns_Main.Name = "mns_Main";
+            this.mns_Main.Size = new System.Drawing.Size(1008, 24);
+            this.mns_Main.TabIndex = 0;
+            this.mns_Main.Text = "menuStrip1";
+            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,16 +151,17 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip mns_Main;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_File;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pengelolaanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pengelolaanUserSistemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pengelolaanKurirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pengelolaanPelangganToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pengelolaanSupplierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pengelolaanBarangToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip mns_Main;
+
     }
 }

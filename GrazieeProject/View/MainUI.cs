@@ -11,9 +11,12 @@ namespace GrazieeProject.View
 {
     public partial class MainUI : Form
     {
-        public MainUI()
+        private string m_roleMain = String.Empty;
+
+        public MainUI(string role)
         {
             InitializeComponent();
+            m_roleMain = role;
         }
 
         private bool IsAlreadyActivated(Type formType)

@@ -44,9 +44,9 @@
             this.btn_DeletePermanenUserSistem = new System.Windows.Forms.Button();
             this.btn_RestoreUserSistem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_IdPenggunaSistemNum = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dg_DisplayUserSistem = new System.Windows.Forms.DataGridView();
-            this.txt_IdPenggunaSistemNum = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplayUserSistem)).BeginInit();
@@ -115,7 +115,7 @@
             // 
             // txt_KataSandi
             // 
-            this.txt_KataSandi.Location = new System.Drawing.Point(167, 90);
+            this.txt_KataSandi.Location = new System.Drawing.Point(167, 99);
             this.txt_KataSandi.Name = "txt_KataSandi";
             this.txt_KataSandi.PasswordChar = '*';
             this.txt_KataSandi.Size = new System.Drawing.Size(121, 20);
@@ -139,7 +139,7 @@
             // 
             // btn_AddUserSistem
             // 
-            this.btn_AddUserSistem.Location = new System.Drawing.Point(23, 235);
+            this.btn_AddUserSistem.Location = new System.Drawing.Point(11, 235);
             this.btn_AddUserSistem.Name = "btn_AddUserSistem";
             this.btn_AddUserSistem.Size = new System.Drawing.Size(89, 23);
             this.btn_AddUserSistem.TabIndex = 10;
@@ -149,7 +149,7 @@
             // 
             // btn_EditUserSistem
             // 
-            this.btn_EditUserSistem.Location = new System.Drawing.Point(127, 235);
+            this.btn_EditUserSistem.Location = new System.Drawing.Point(115, 235);
             this.btn_EditUserSistem.Name = "btn_EditUserSistem";
             this.btn_EditUserSistem.Size = new System.Drawing.Size(89, 23);
             this.btn_EditUserSistem.TabIndex = 11;
@@ -159,7 +159,7 @@
             // 
             // btn_DeleteUserSistem
             // 
-            this.btn_DeleteUserSistem.Location = new System.Drawing.Point(222, 235);
+            this.btn_DeleteUserSistem.Location = new System.Drawing.Point(210, 235);
             this.btn_DeleteUserSistem.Name = "btn_DeleteUserSistem";
             this.btn_DeleteUserSistem.Size = new System.Drawing.Size(89, 23);
             this.btn_DeleteUserSistem.TabIndex = 12;
@@ -169,7 +169,7 @@
             // 
             // btn_DeletePermanenUserSistem
             // 
-            this.btn_DeletePermanenUserSistem.Location = new System.Drawing.Point(45, 274);
+            this.btn_DeletePermanenUserSistem.Location = new System.Drawing.Point(33, 274);
             this.btn_DeletePermanenUserSistem.Name = "btn_DeletePermanenUserSistem";
             this.btn_DeletePermanenUserSistem.Size = new System.Drawing.Size(100, 23);
             this.btn_DeletePermanenUserSistem.TabIndex = 13;
@@ -179,7 +179,7 @@
             // 
             // btn_RestoreUserSistem
             // 
-            this.btn_RestoreUserSistem.Location = new System.Drawing.Point(167, 274);
+            this.btn_RestoreUserSistem.Location = new System.Drawing.Point(155, 274);
             this.btn_RestoreUserSistem.Name = "btn_RestoreUserSistem";
             this.btn_RestoreUserSistem.Size = new System.Drawing.Size(100, 23);
             this.btn_RestoreUserSistem.TabIndex = 14;
@@ -212,6 +212,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Data";
             // 
+            // txt_IdPenggunaSistemNum
+            // 
+            this.txt_IdPenggunaSistemNum.Location = new System.Drawing.Point(222, 30);
+            this.txt_IdPenggunaSistemNum.Name = "txt_IdPenggunaSistemNum";
+            this.txt_IdPenggunaSistemNum.ReadOnly = true;
+            this.txt_IdPenggunaSistemNum.Size = new System.Drawing.Size(66, 20);
+            this.txt_IdPenggunaSistemNum.TabIndex = 15;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dg_DisplayUserSistem);
@@ -229,14 +237,6 @@
             this.dg_DisplayUserSistem.Name = "dg_DisplayUserSistem";
             this.dg_DisplayUserSistem.Size = new System.Drawing.Size(355, 372);
             this.dg_DisplayUserSistem.TabIndex = 0;
-            // 
-            // txt_IdPenggunaSistemNum
-            // 
-            this.txt_IdPenggunaSistemNum.Location = new System.Drawing.Point(222, 30);
-            this.txt_IdPenggunaSistemNum.Name = "txt_IdPenggunaSistemNum";
-            this.txt_IdPenggunaSistemNum.ReadOnly = true;
-            this.txt_IdPenggunaSistemNum.Size = new System.Drawing.Size(66, 20);
-            this.txt_IdPenggunaSistemNum.TabIndex = 15;
             // 
             // UserSistemUI
             // 

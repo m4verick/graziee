@@ -221,6 +221,44 @@ namespace GrazieeProject.Control
             return dataSet;
         }
 
+        public string GetRoleUserSistem(string namaUser, string passUser)
+        {
+            string result = String.Empty;
+
+            query = string.Empty;
+            query = "SELECT role_user FROM user_sistem WHERE nama_user = '" + namaUser + "' AND pass_user = '" + passUser + "'";
+
+            try
+            {
+                connect.Open();
+                cmd = new MySqlCommand(query, connect);
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    result = reader.GetString(0);
+                }
+                else
+                {
+                    result = String.Empty;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                result = String.Empty;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                result = String.Empty;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return result;
+        }
+
         public string GetMaxIDUserSistem()
         {
             string result = String.Empty;
