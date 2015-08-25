@@ -169,5 +169,13 @@ namespace GrazieeProject.View
                 MessageBox.Show("Gagal Tampil Barang UI : " + el.Message, "Informasi");
             }
         }
+
+        private void pengelolaanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!m_roleMain.Equals("Administrator"))
+            {
+                pengelolaanUserSistemToolStripMenuItem.Enabled = false;
+            }
+        }
     }
 }

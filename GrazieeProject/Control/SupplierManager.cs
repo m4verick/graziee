@@ -187,6 +187,35 @@ namespace GrazieeProject.Control
             return dataSet;
         }
 
+        public DataSet GetDataSupplierByName(string name)
+        {
+            dataSet = new DataSet();
+            query = string.Empty;
+            query = "SELECT * FROM supplier WHERE nama_supplier LIKE '%" + name + "%'";
+
+            try
+            {
+                connect.Open();
+                adapt = new MySqlDataAdapter(query, connect);
+                adapt.Fill(dataSet);
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                return null;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dataSet;
+        }
+
         public DataSet GetDataSupplierComboBox()
         {
             dataSet = new DataSet();

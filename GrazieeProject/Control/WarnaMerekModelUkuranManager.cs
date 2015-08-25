@@ -136,6 +136,35 @@ namespace GrazieeProject.Control
             return dataSet;
         }
 
+        public DataSet GetDataWarnaByName(string name)
+        {
+            dataSet = new DataSet();
+            query = string.Empty;
+            query = "SELECT * FROM warna_barang WHERE nama_warna LIKE '%" + name + "%'";
+
+            try
+            {
+                connect.Open();
+                adapt = new MySqlDataAdapter(query, connect);
+                adapt.Fill(dataSet);
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                return null;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dataSet;
+        }
+
         public DataSet GetDataWarnaComboBox()
         {
             dataSet = new DataSet();
@@ -288,6 +317,35 @@ namespace GrazieeProject.Control
             dataSet = new DataSet();
             query = string.Empty;
             query = "SELECT * FROM merek_barang";
+
+            try
+            {
+                connect.Open();
+                adapt = new MySqlDataAdapter(query, connect);
+                adapt.Fill(dataSet);
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                return null;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dataSet;
+        }
+
+        public DataSet GetDataMerekByName(string name)
+        {
+            dataSet = new DataSet();
+            query = string.Empty;
+            query = "SELECT * FROM merek_barang WHERE nama_merek LIKE '%" + name + "%'";
 
             try
             {
@@ -488,6 +546,35 @@ namespace GrazieeProject.Control
             return dataSet;
         }
 
+        public DataSet GetDataModelByName(string name)
+        {
+            dataSet = new DataSet();
+            query = string.Empty;
+            query = "SELECT * FROM model_barang WHERE nama_model LIKE '%" + name + "%'";
+
+            try
+            {
+                connect.Open();
+                adapt = new MySqlDataAdapter(query, connect);
+                adapt.Fill(dataSet);
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                return null;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dataSet;
+        }
+
         public DataSet GetDataModelComboBox()
         {
             dataSet = new DataSet();
@@ -640,6 +727,35 @@ namespace GrazieeProject.Control
             dataSet = new DataSet();
             query = string.Empty;
             query = "SELECT * FROM ukuran_barang";
+
+            try
+            {
+                connect.Open();
+                adapt = new MySqlDataAdapter(query, connect);
+                adapt.Fill(dataSet);
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                return null;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dataSet;
+        }
+
+        public DataSet GetDataUkuranByName(string name)
+        {
+            dataSet = new DataSet();
+            query = string.Empty;
+            query = "SELECT * FROM ukuran_barang WHERE ukuran LIKE '%" + name + "%'";
 
             try
             {

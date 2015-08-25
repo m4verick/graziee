@@ -84,6 +84,7 @@
             this.pengelolaanToolStripMenuItem.Name = "pengelolaanToolStripMenuItem";
             this.pengelolaanToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.pengelolaanToolStripMenuItem.Text = "Pengelolaan ";
+            this.pengelolaanToolStripMenuItem.Click += new System.EventHandler(this.pengelolaanToolStripMenuItem_Click);
             // 
             // pengelolaanUserSistemToolStripMenuItem
             // 
