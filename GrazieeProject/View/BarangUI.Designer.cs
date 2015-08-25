@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pb_BarcodeImage = new System.Windows.Forms.PictureBox();
             this.txt_IdBarangIncr = new System.Windows.Forms.TextBox();
             this.btn_SearchJenisSubJenis = new System.Windows.Forms.Button();
             this.btn_SearchModelBarang = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.radio_StatusStokPiutang = new System.Windows.Forms.RadioButton();
             this.radio_GenderFemale = new System.Windows.Forms.RadioButton();
             this.radio_GenderMale = new System.Windows.Forms.RadioButton();
-            this.cmb_NamaSubJenisBarang = new System.Windows.Forms.ComboBox();
             this.cmb_JenisBarang = new System.Windows.Forms.ComboBox();
             this.cmb_NamaModelBarang = new System.Windows.Forms.ComboBox();
             this.cmb_NamaWarnaBarang = new System.Windows.Forms.ComboBox();
@@ -57,7 +57,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pb_BarcodeImage = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_BarcodeImage)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +76,6 @@
             this.groupBox1.Controls.Add(this.radio_StatusStokPiutang);
             this.groupBox1.Controls.Add(this.radio_GenderFemale);
             this.groupBox1.Controls.Add(this.radio_GenderMale);
-            this.groupBox1.Controls.Add(this.cmb_NamaSubJenisBarang);
             this.groupBox1.Controls.Add(this.cmb_JenisBarang);
             this.groupBox1.Controls.Add(this.cmb_NamaModelBarang);
             this.groupBox1.Controls.Add(this.cmb_NamaWarnaBarang);
@@ -100,6 +98,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Data";
             // 
+            // pb_BarcodeImage
+            // 
+            this.pb_BarcodeImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pb_BarcodeImage.Location = new System.Drawing.Point(386, 240);
+            this.pb_BarcodeImage.Name = "pb_BarcodeImage";
+            this.pb_BarcodeImage.Size = new System.Drawing.Size(205, 161);
+            this.pb_BarcodeImage.TabIndex = 28;
+            this.pb_BarcodeImage.TabStop = false;
+            // 
             // txt_IdBarangIncr
             // 
             this.txt_IdBarangIncr.Location = new System.Drawing.Point(280, 39);
@@ -110,7 +117,7 @@
             // 
             // btn_SearchJenisSubJenis
             // 
-            this.btn_SearchJenisSubJenis.Location = new System.Drawing.Point(455, 193);
+            this.btn_SearchJenisSubJenis.Location = new System.Drawing.Point(328, 193);
             this.btn_SearchJenisSubJenis.Name = "btn_SearchJenisSubJenis";
             this.btn_SearchJenisSubJenis.Size = new System.Drawing.Size(75, 23);
             this.btn_SearchJenisSubJenis.TabIndex = 26;
@@ -219,14 +226,6 @@
             this.radio_GenderMale.TabStop = true;
             this.radio_GenderMale.Text = "Laki-laki";
             this.radio_GenderMale.UseVisualStyleBackColor = true;
-            // 
-            // cmb_NamaSubJenisBarang
-            // 
-            this.cmb_NamaSubJenisBarang.FormattingEnabled = true;
-            this.cmb_NamaSubJenisBarang.Location = new System.Drawing.Point(328, 193);
-            this.cmb_NamaSubJenisBarang.Name = "cmb_NamaSubJenisBarang";
-            this.cmb_NamaSubJenisBarang.Size = new System.Drawing.Size(121, 21);
-            this.cmb_NamaSubJenisBarang.TabIndex = 15;
             // 
             // cmb_JenisBarang
             // 
@@ -358,15 +357,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID BARANG";
             // 
-            // pb_BarcodeImage
-            // 
-            this.pb_BarcodeImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pb_BarcodeImage.Location = new System.Drawing.Point(386, 240);
-            this.pb_BarcodeImage.Name = "pb_BarcodeImage";
-            this.pb_BarcodeImage.Size = new System.Drawing.Size(205, 161);
-            this.pb_BarcodeImage.TabIndex = 28;
-            this.pb_BarcodeImage.TabStop = false;
-            // 
             // BarangUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,7 +384,6 @@
         private System.Windows.Forms.RadioButton radio_StatusStokPiutang;
         private System.Windows.Forms.RadioButton radio_GenderFemale;
         private System.Windows.Forms.RadioButton radio_GenderMale;
-        private System.Windows.Forms.ComboBox cmb_NamaSubJenisBarang;
         private System.Windows.Forms.ComboBox cmb_JenisBarang;
         private System.Windows.Forms.ComboBox cmb_NamaModelBarang;
         private System.Windows.Forms.ComboBox cmb_NamaWarnaBarang;

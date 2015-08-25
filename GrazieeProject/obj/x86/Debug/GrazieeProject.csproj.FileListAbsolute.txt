@@ -31,14 +31,11 @@ D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.LoginUI.resources
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.MainUI.resources
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.MerekBarangUI.resources
-D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.ModelBarangUI.resources
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.PelangganUI.resources
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.SupplierUI.resources
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.TransaksiPembelianUI.resources
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.TransaksiPenjualanUI.resources
-D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.UkuranBarangUI.resources
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.UserSistemUI.resources
-D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.WarnaBarangUI.resources
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.csproj.GenerateResource.Cache
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Debug\GrazieeProject.exe
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Debug\GrazieeProject.pdb

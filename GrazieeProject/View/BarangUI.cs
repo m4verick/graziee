@@ -33,14 +33,14 @@ namespace GrazieeProject.View
 
         private void btn_SearchWarnaBarang_Click(object sender, EventArgs e)
         {
-            WarnaBarangUI s_WarnaBarangUI = new WarnaBarangUI();
-            s_WarnaBarangUI.Show();
+           // WarnaBarangUI s_WarnaBarangUI = new WarnaBarangUI();
+            //s_WarnaBarangUI.Show();
         }
 
         private void btn_SearchModelBarang_Click(object sender, EventArgs e)
         {
-            ModelBarangUI s_ModelBarangUI = new ModelBarangUI();
-            s_ModelBarangUI.Show();
+            //ModelBarangUI s_ModelBarangUI = new ModelBarangUI();
+           // s_ModelBarangUI.Show();
         }
 
         private void generateBarcode()
