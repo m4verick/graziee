@@ -50,24 +50,24 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btn_AddWarnaBarang = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_DisplayMerekBarang = new System.Windows.Forms.TextBox();
             this.dgv_MerekBarang = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txt_DisplayModelBarang = new System.Windows.Forms.TextBox();
             this.dgv_ModelBarang = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txt_DisplayWarnaBarang = new System.Windows.Forms.TextBox();
             this.dgv_WarnaBarang = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txt_DisplayUkuranBarang = new System.Windows.Forms.TextBox();
+            this.dgv_UkuranBarang = new System.Windows.Forms.DataGridView();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_IdUkuranBarangNum = new System.Windows.Forms.TextBox();
+            this.txt_NamaUkuranBarang = new System.Windows.Forms.TextBox();
+            this.txt_IdUkuranBarang = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txt_DisplayMerekBarang = new System.Windows.Forms.TextBox();
-            this.txt_DisplayModelBarang = new System.Windows.Forms.TextBox();
-            this.txt_DisplayWarnaBarang = new System.Windows.Forms.TextBox();
-            this.txt_DisplayUkuranBarang = new System.Windows.Forms.TextBox();
+            this.btn_AddUkuranBarang = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -78,7 +78,7 @@
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_WarnaBarang)).BeginInit();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_UkuranBarang)).BeginInit();
             this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -214,6 +214,7 @@
             this.btn_AddModelBarang.TabIndex = 0;
             this.btn_AddModelBarang.Text = "Tambah Data";
             this.btn_AddModelBarang.UseVisualStyleBackColor = true;
+            this.btn_AddModelBarang.Click += new System.EventHandler(this.btn_AddModelBarang_Click);
             // 
             // groupBox3
             // 
@@ -280,6 +281,7 @@
             this.btn_AddWarnaBarang.TabIndex = 0;
             this.btn_AddWarnaBarang.Text = "Tambah Data";
             this.btn_AddWarnaBarang.UseVisualStyleBackColor = true;
+            this.btn_AddWarnaBarang.Click += new System.EventHandler(this.btn_AddWarnaBarang_Click);
             // 
             // groupBox4
             // 
@@ -292,6 +294,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Display Merek Barang";
             // 
+            // txt_DisplayMerekBarang
+            // 
+            this.txt_DisplayMerekBarang.Location = new System.Drawing.Point(6, 30);
+            this.txt_DisplayMerekBarang.Name = "txt_DisplayMerekBarang";
+            this.txt_DisplayMerekBarang.Size = new System.Drawing.Size(154, 20);
+            this.txt_DisplayMerekBarang.TabIndex = 1;
+            // 
             // dgv_MerekBarang
             // 
             this.dgv_MerekBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -299,6 +308,7 @@
             this.dgv_MerekBarang.Name = "dgv_MerekBarang";
             this.dgv_MerekBarang.Size = new System.Drawing.Size(302, 358);
             this.dgv_MerekBarang.TabIndex = 0;
+            this.dgv_MerekBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_MerekBarang_CellContentClick);
             // 
             // groupBox5
             // 
@@ -311,6 +321,13 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Display Model Barang";
             // 
+            // txt_DisplayModelBarang
+            // 
+            this.txt_DisplayModelBarang.Location = new System.Drawing.Point(6, 31);
+            this.txt_DisplayModelBarang.Name = "txt_DisplayModelBarang";
+            this.txt_DisplayModelBarang.Size = new System.Drawing.Size(154, 20);
+            this.txt_DisplayModelBarang.TabIndex = 2;
+            // 
             // dgv_ModelBarang
             // 
             this.dgv_ModelBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -318,6 +335,7 @@
             this.dgv_ModelBarang.Name = "dgv_ModelBarang";
             this.dgv_ModelBarang.Size = new System.Drawing.Size(302, 358);
             this.dgv_ModelBarang.TabIndex = 1;
+            this.dgv_ModelBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ModelBarang_CellContentClick);
             // 
             // groupBox6
             // 
@@ -330,6 +348,13 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Display Warna Barang";
             // 
+            // txt_DisplayWarnaBarang
+            // 
+            this.txt_DisplayWarnaBarang.Location = new System.Drawing.Point(6, 30);
+            this.txt_DisplayWarnaBarang.Name = "txt_DisplayWarnaBarang";
+            this.txt_DisplayWarnaBarang.Size = new System.Drawing.Size(154, 20);
+            this.txt_DisplayWarnaBarang.TabIndex = 3;
+            // 
             // dgv_WarnaBarang
             // 
             this.dgv_WarnaBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -337,11 +362,12 @@
             this.dgv_WarnaBarang.Name = "dgv_WarnaBarang";
             this.dgv_WarnaBarang.Size = new System.Drawing.Size(302, 358);
             this.dgv_WarnaBarang.TabIndex = 1;
+            this.dgv_WarnaBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_WarnaBarang_CellContentClick);
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.txt_DisplayUkuranBarang);
-            this.groupBox7.Controls.Add(this.dataGridView1);
+            this.groupBox7.Controls.Add(this.dgv_UkuranBarang);
             this.groupBox7.Location = new System.Drawing.Point(972, 180);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(314, 423);
@@ -349,22 +375,30 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Display Ukuran Barang";
             // 
-            // dataGridView1
+            // txt_DisplayUkuranBarang
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(302, 358);
-            this.dataGridView1.TabIndex = 1;
+            this.txt_DisplayUkuranBarang.Location = new System.Drawing.Point(6, 30);
+            this.txt_DisplayUkuranBarang.Name = "txt_DisplayUkuranBarang";
+            this.txt_DisplayUkuranBarang.Size = new System.Drawing.Size(154, 20);
+            this.txt_DisplayUkuranBarang.TabIndex = 2;
+            // 
+            // dgv_UkuranBarang
+            // 
+            this.dgv_UkuranBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_UkuranBarang.Location = new System.Drawing.Point(6, 56);
+            this.dgv_UkuranBarang.Name = "dgv_UkuranBarang";
+            this.dgv_UkuranBarang.Size = new System.Drawing.Size(302, 358);
+            this.dgv_UkuranBarang.TabIndex = 1;
+            this.dgv_UkuranBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_UkuranBarang_CellContentClick);
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.textBox1);
-            this.groupBox8.Controls.Add(this.textBox2);
-            this.groupBox8.Controls.Add(this.textBox3);
+            this.groupBox8.Controls.Add(this.txt_IdUkuranBarangNum);
+            this.groupBox8.Controls.Add(this.txt_NamaUkuranBarang);
+            this.groupBox8.Controls.Add(this.txt_IdUkuranBarang);
             this.groupBox8.Controls.Add(this.label7);
             this.groupBox8.Controls.Add(this.label8);
-            this.groupBox8.Controls.Add(this.button1);
+            this.groupBox8.Controls.Add(this.btn_AddUkuranBarang);
             this.groupBox8.Location = new System.Drawing.Point(972, 12);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(314, 162);
@@ -372,29 +406,29 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Input Ukuran Barang";
             // 
-            // textBox1
+            // txt_IdUkuranBarangNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.txt_IdUkuranBarangNum.Location = new System.Drawing.Point(184, 35);
+            this.txt_IdUkuranBarangNum.Name = "txt_IdUkuranBarangNum";
+            this.txt_IdUkuranBarangNum.ReadOnly = true;
+            this.txt_IdUkuranBarangNum.Size = new System.Drawing.Size(100, 20);
+            this.txt_IdUkuranBarangNum.TabIndex = 5;
             // 
-            // textBox2
+            // txt_NamaUkuranBarang
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 20);
-            this.textBox2.TabIndex = 4;
+            this.txt_NamaUkuranBarang.Location = new System.Drawing.Point(122, 72);
+            this.txt_NamaUkuranBarang.Name = "txt_NamaUkuranBarang";
+            this.txt_NamaUkuranBarang.Size = new System.Drawing.Size(162, 20);
+            this.txt_NamaUkuranBarang.TabIndex = 4;
             // 
-            // textBox3
+            // txt_IdUkuranBarang
             // 
-            this.textBox3.Location = new System.Drawing.Point(122, 35);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(56, 20);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "UKR-";
+            this.txt_IdUkuranBarang.Location = new System.Drawing.Point(122, 35);
+            this.txt_IdUkuranBarang.Name = "txt_IdUkuranBarang";
+            this.txt_IdUkuranBarang.ReadOnly = true;
+            this.txt_IdUkuranBarang.Size = new System.Drawing.Size(56, 20);
+            this.txt_IdUkuranBarang.TabIndex = 3;
+            this.txt_IdUkuranBarang.Text = "UKR-";
             // 
             // label7
             // 
@@ -414,42 +448,15 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "ID UKURAN";
             // 
-            // button1
+            // btn_AddUkuranBarang
             // 
-            this.button1.Location = new System.Drawing.Point(122, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Tambah Data";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // txt_DisplayMerekBarang
-            // 
-            this.txt_DisplayMerekBarang.Location = new System.Drawing.Point(6, 30);
-            this.txt_DisplayMerekBarang.Name = "txt_DisplayMerekBarang";
-            this.txt_DisplayMerekBarang.Size = new System.Drawing.Size(154, 20);
-            this.txt_DisplayMerekBarang.TabIndex = 1;
-            // 
-            // txt_DisplayModelBarang
-            // 
-            this.txt_DisplayModelBarang.Location = new System.Drawing.Point(6, 31);
-            this.txt_DisplayModelBarang.Name = "txt_DisplayModelBarang";
-            this.txt_DisplayModelBarang.Size = new System.Drawing.Size(154, 20);
-            this.txt_DisplayModelBarang.TabIndex = 2;
-            // 
-            // txt_DisplayWarnaBarang
-            // 
-            this.txt_DisplayWarnaBarang.Location = new System.Drawing.Point(6, 30);
-            this.txt_DisplayWarnaBarang.Name = "txt_DisplayWarnaBarang";
-            this.txt_DisplayWarnaBarang.Size = new System.Drawing.Size(154, 20);
-            this.txt_DisplayWarnaBarang.TabIndex = 3;
-            // 
-            // txt_DisplayUkuranBarang
-            // 
-            this.txt_DisplayUkuranBarang.Location = new System.Drawing.Point(6, 30);
-            this.txt_DisplayUkuranBarang.Name = "txt_DisplayUkuranBarang";
-            this.txt_DisplayUkuranBarang.Size = new System.Drawing.Size(154, 20);
-            this.txt_DisplayUkuranBarang.TabIndex = 2;
+            this.btn_AddUkuranBarang.Location = new System.Drawing.Point(122, 112);
+            this.btn_AddUkuranBarang.Name = "btn_AddUkuranBarang";
+            this.btn_AddUkuranBarang.Size = new System.Drawing.Size(75, 23);
+            this.btn_AddUkuranBarang.TabIndex = 0;
+            this.btn_AddUkuranBarang.Text = "Tambah Data";
+            this.btn_AddUkuranBarang.UseVisualStyleBackColor = true;
+            this.btn_AddUkuranBarang.Click += new System.EventHandler(this.btn_AddUkuranBarang_Click);
             // 
             // MerekBarangUI
             // 
@@ -483,7 +490,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_WarnaBarang)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_UkuranBarang)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
@@ -520,14 +527,14 @@
         private System.Windows.Forms.DataGridView dgv_ModelBarang;
         private System.Windows.Forms.DataGridView dgv_WarnaBarang;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_UkuranBarang;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_IdUkuranBarangNum;
+        private System.Windows.Forms.TextBox txt_NamaUkuranBarang;
+        private System.Windows.Forms.TextBox txt_IdUkuranBarang;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_AddUkuranBarang;
         private System.Windows.Forms.TextBox txt_DisplayMerekBarang;
         private System.Windows.Forms.TextBox txt_DisplayModelBarang;
         private System.Windows.Forms.TextBox txt_DisplayWarnaBarang;
