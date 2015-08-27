@@ -35,7 +35,14 @@ namespace GrazieeProject.View
 
         private void MainUI_Load(object sender, EventArgs e)
         {
+            if (!m_roleMain.Equals("Administrator"))
+            {
+                pengelolaanUserSistemToolStripMenuItem.Enabled = false;
+                pengelolaanKurirToolStripMenuItem.Enabled = false;
+                pengelolaanPelangganToolStripMenuItem.Enabled = false;
+                pengelolaanSupplierToolStripMenuItem.Enabled = false;
 
+            }
         }
 
         private void pengelolaanPelangganToolStripMenuItem_Click(object sender, EventArgs e)
@@ -170,11 +177,37 @@ namespace GrazieeProject.View
             }
         }
 
-        private void pengelolaanToolStripMenuItem_Click(object sender, EventArgs e)
+        private void transaksiPenjualanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!m_roleMain.Equals("Administrator"))
+            try
             {
-                pengelolaanUserSistemToolStripMenuItem.Enabled = false;
+                if (!IsAlreadyActivated(typeof(TransaksiPenjualanUI)))
+                {
+                    TransaksiPenjualanUI s_TransPenjualanUI = new TransaksiPenjualanUI();
+                    s_TransPenjualanUI.MdiParent = this;
+                    s_TransPenjualanUI.Show();
+                }
+            }
+            catch (Exception el)
+            {
+                MessageBox.Show("Gagal Tampil Transaksi Penjualan UI : " + el.Message, "Informasi");
+            }
+        }
+
+        private void transaksiPembelianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!IsAlreadyActivated(typeof(TransaksiPembelianUI)))
+                {
+                    TransaksiPembelianUI s_TransPembelianUI = new TransaksiPembelianUI();
+                    s_TransPembelianUI.MdiParent = this;
+                    s_TransPembelianUI.Show();
+                }
+            }
+            catch (Exception el)
+            {
+                MessageBox.Show("Gagal Tampil Transaksi Pembelian UI : " + el.Message, "Informasi");
             }
         }
     }

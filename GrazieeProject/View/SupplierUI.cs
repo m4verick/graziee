@@ -34,6 +34,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil ditambah");
                     txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-") + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -55,6 +56,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil ditambah");
                     txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-") + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -76,6 +78,7 @@ namespace GrazieeProject.View
                 {                    
                     MessageBox.Show("Data berhasil ditambah");
                     txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-") + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -101,6 +104,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil dihapus permanen");
                     txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-") + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -123,6 +127,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil dipulihkan");
                     txt_IdSupplierNum.Text = Utils.DisplayMaxID(s_SupplierManager.GetMaxIDSupp().Substring(s_SupplierManager.GetMaxIDSupp().IndexOf("-") + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -159,6 +164,14 @@ namespace GrazieeProject.View
             {
                 MessageBox.Show("Gagal get data supplier", "Error");
             }
+        }
+
+        private void ClearField()
+        {
+            txt_NamaSupplier.Text = String.Empty;
+            txt_AlamatSupplier.Text = String.Empty;
+            txt_NoTelpSupplier.Text = String.Empty;
+            DisplaySupplier();
         }
     }
 }

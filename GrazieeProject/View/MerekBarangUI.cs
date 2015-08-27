@@ -42,6 +42,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil ditambah");
                     txt_IdMerekBarangNum.Text = Utils.DisplayMaxID(s_MerekBarangManager.GetMaxIDMerekBarang().Substring((s_MerekBarangManager.GetMaxIDMerekBarang().IndexOf("-")) + 1));
+                    ClearFieldMerek();
                 }
                 else
                 {
@@ -77,6 +78,12 @@ namespace GrazieeProject.View
             s_BindingMerek.Filter = string.Empty;
             dgv_MerekBarang.DataSource = s_BindingMerek; 
         }
+
+        private void ClearFieldMerek()
+        {
+            txt_NamaMerekBarang.Text = String.Empty;
+            DisplayMerekBarang();
+        }
         #endregion
 
         #region ModelBarang
@@ -89,6 +96,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil ditambah");
                     txt_IdModelBarangNum.Text = Utils.DisplayMaxID(s_MerekBarangManager.GetMaxIDModelBarang().Substring((s_MerekBarangManager.GetMaxIDModelBarang().IndexOf("-")) + 1));
+                    ClearFieldModel();
                 }
                 else
                 {
@@ -124,6 +132,12 @@ namespace GrazieeProject.View
             s_BindingModel.Filter = string.Empty;
             dgv_ModelBarang.DataSource = s_BindingModel;
         }
+
+        private void ClearFieldModel()
+        {
+            txt_NamaModelBarang.Text = String.Empty;
+            DisplayModelBarang();
+        }
         #endregion
 
         #region WarnaBarang
@@ -136,6 +150,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil ditambah");
                     txt_IdWarnaBarangNum.Text = Utils.DisplayMaxID(s_MerekBarangManager.GetMaxIDWarnaBarang().Substring((s_MerekBarangManager.GetMaxIDWarnaBarang().IndexOf("-")) + 1));
+                    ClearFieldWarna();
                 }
                 else
                 {
@@ -171,6 +186,12 @@ namespace GrazieeProject.View
             s_BindingWarna.Filter = string.Empty;
             dgv_WarnaBarang.DataSource = s_BindingWarna;
         }
+
+        private void ClearFieldWarna()
+        {
+            txt_NamaWarnaBarang.Text = String.Empty;
+            DisplayWarnaBarang();
+        }
         #endregion
 
         #region UkuranBarang
@@ -183,6 +204,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil ditambah");
                     txt_IdUkuranBarangNum.Text = Utils.DisplayMaxID(s_MerekBarangManager.GetMaxIDUkuranBarang().Substring((s_MerekBarangManager.GetMaxIDUkuranBarang().IndexOf("-")) + 1));
+                    ClearFieldUkuran();
                 }
                 else
                 {
@@ -217,6 +239,12 @@ namespace GrazieeProject.View
             s_BindingUkuran.DataSource = s_MerekBarangManager.GetDataUkuran().Tables[0];
             s_BindingUkuran.Filter = string.Empty;
             dgv_UkuranBarang.DataSource = s_BindingUkuran;
+        }
+
+        private void ClearFieldUkuran()
+        {
+            txt_NamaUkuranBarang.Text = String.Empty;
+            DisplayUkuranBarang();
         }
         #endregion
     }

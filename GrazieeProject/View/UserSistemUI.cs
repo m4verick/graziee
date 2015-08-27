@@ -30,11 +30,12 @@ namespace GrazieeProject.View
         {
             if (txt_NamaPengguna.TextLength > 0 && txt_KataSandi.TextLength > 0 && txt_UlangiKataSandi.TextLength > 0 && cmb_Role.SelectedIndex != -1)
             {
-                s_userSistem = new UserSistem(txt_IdPenggunaSistem.Text.ToString(), txt_NamaPengguna.Text.ToString(), Utils.PassEncrypt(txt_KataSandi.Text.ToString(), true), cmb_Role.SelectedItem.ToString());
+                s_userSistem = new UserSistem(Utils.ConcatMaxID(txt_IdPenggunaSistem.Text.ToString(), txt_IdPenggunaSistemNum.Text.ToString()), txt_NamaPengguna.Text.ToString(), Utils.PassEncrypt(txt_KataSandi.Text.ToString(), true), cmb_Role.SelectedItem.ToString());
                 if (s_userSistemManager.AddUserSistem(s_userSistem))
                 {
                     MessageBox.Show("Data berhasil ditambah");
-                    txt_IdPenggunaSistemNum.Text = Utils.DisplayMaxID(s_userSistemManager.GetMaxIDUserSistem().Substring(s_userSistemManager.GetMaxIDUserSistem().IndexOf("-")));
+                    txt_IdPenggunaSistemNum.Text = Utils.DisplayMaxID(s_userSistemManager.GetMaxIDUserSistem().Substring(s_userSistemManager.GetMaxIDUserSistem().IndexOf("-") + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -51,11 +52,12 @@ namespace GrazieeProject.View
         {
             if (txt_NamaPengguna.TextLength > 0 && txt_KataSandi.TextLength > 0 && txt_UlangiKataSandi.TextLength > 0 && cmb_Role.SelectedIndex != -1)
             {
-                s_userSistem = new UserSistem(txt_IdPenggunaSistem.Text.ToString(), txt_NamaPengguna.Text.ToString(), Utils.PassEncrypt(txt_KataSandi.Text.ToString(), true), cmb_Role.SelectedItem.ToString());
+                s_userSistem = new UserSistem(Utils.ConcatMaxID(txt_IdPenggunaSistem.Text.ToString(), txt_IdPenggunaSistemNum.Text.ToString()), txt_NamaPengguna.Text.ToString(), Utils.PassEncrypt(txt_KataSandi.Text.ToString(), true), cmb_Role.SelectedItem.ToString());
                 if (s_userSistemManager.UpdateUserSistem(s_userSistem))
                 {
                     MessageBox.Show("Data berhasil diubah");
                     txt_IdPenggunaSistemNum.Text = Utils.DisplayMaxID(s_userSistemManager.GetMaxIDUserSistem().Substring((s_userSistemManager.GetMaxIDUserSistem().IndexOf("-")) + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -72,11 +74,12 @@ namespace GrazieeProject.View
         {
             if (txt_NamaPengguna.TextLength > 0 && txt_KataSandi.TextLength > 0 && txt_UlangiKataSandi.TextLength > 0 && cmb_Role.SelectedIndex != -1)
             {
-                s_userSistem = new UserSistem(txt_IdPenggunaSistem.Text.ToString(), txt_NamaPengguna.Text.ToString(), Utils.PassEncrypt(txt_KataSandi.Text.ToString(), true), cmb_Role.SelectedItem.ToString());
+                s_userSistem = new UserSistem(Utils.ConcatMaxID(txt_IdPenggunaSistem.Text.ToString(), txt_IdPenggunaSistemNum.Text.ToString()), txt_NamaPengguna.Text.ToString(), Utils.PassEncrypt(txt_KataSandi.Text.ToString(), true), cmb_Role.SelectedItem.ToString());
                 if (s_userSistemManager.DeleteUserSistem(s_userSistem))
                 {
                     MessageBox.Show("Data berhasil dihapus");
                     txt_IdPenggunaSistemNum.Text = Utils.DisplayMaxID(s_userSistemManager.GetMaxIDUserSistem().Substring((s_userSistemManager.GetMaxIDUserSistem().IndexOf("-")) + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -96,12 +99,13 @@ namespace GrazieeProject.View
             if (dialogResult == DialogResult.Yes)
             {
                 s_userSistem = new UserSistem();
-                s_userSistem.Id_user_sistem = txt_IdPenggunaSistem.Text.ToString();
+                s_userSistem.Id_user_sistem = Utils.ConcatMaxID(txt_IdPenggunaSistem.Text.ToString(), txt_IdPenggunaSistemNum.Text.ToString());
 
                 if (s_userSistemManager.DeleteUserSistemPermanen(s_userSistem))
                 {
                     MessageBox.Show("Data berhasil dihapus permanen");
                     txt_IdPenggunaSistemNum.Text = Utils.DisplayMaxID(s_userSistemManager.GetMaxIDUserSistem().Substring((s_userSistemManager.GetMaxIDUserSistem().IndexOf("-")) + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -124,6 +128,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil dipulihkan");
                     txt_IdPenggunaSistemNum.Text = Utils.DisplayMaxID(s_userSistemManager.GetMaxIDUserSistem().Substring((s_userSistemManager.GetMaxIDUserSistem().IndexOf("-")) + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -160,6 +165,15 @@ namespace GrazieeProject.View
             {
                 MessageBox.Show("Gagal get data user sistem", "Error");
             }
+        }
+
+        private void ClearField()
+        {
+            txt_NamaPengguna.Text = String.Empty;
+            txt_KataSandi.Text = String.Empty;
+            txt_UlangiKataSandi.Text = String.Empty;
+            cmb_Role.SelectedIndex = -1;
+            DisplayUserSistem();
         }
     }
 }

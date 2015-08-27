@@ -196,7 +196,7 @@ namespace GrazieeProject.Control
         {
             dataSet = new DataSet();
             query = string.Empty;
-            query = "SELECT * FROM user_sistem";
+            query = "SELECT id_user_sistem, nama_user, pass_user, role_user FROM user_sistem";
 
             try
             {
@@ -225,7 +225,7 @@ namespace GrazieeProject.Control
         {
             dataSet = new DataSet();
             query = string.Empty;
-            query = "SELECT * FROM user_sistem WHERE nama_user LIKE '%" + name + "%'";
+            query = "SELECT id_user_sistem, nama_user, pass_user, role_user FROM user_sistem WHERE nama_user LIKE '%" + name + "%'";
 
             try
             {

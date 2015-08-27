@@ -13,7 +13,6 @@ namespace GrazieeProject.View
 {
     public partial class LoginUI : Form
     {
-        UserSistem s_userSistem;
         UserSistemManager s_userSistemManager;
         string m_mainRole = String.Empty;
 
@@ -27,7 +26,7 @@ namespace GrazieeProject.View
         {
             if (txt_Username.TextLength > 0 && txt_Password.TextLength > 0)
             {
-                m_mainRole = s_userSistemManager.GetRoleUserSistem(txt_Username.Text.ToString(), txt_Password.Text.ToString());
+                m_mainRole = s_userSistemManager.GetRoleUserSistem(txt_Username.Text.ToString(), Utils.PassEncrypt(txt_Password.Text.ToString(),true));
                 if (!m_mainRole.Equals(String.Empty))
                 {
                     MessageBox.Show("Login berhasil");

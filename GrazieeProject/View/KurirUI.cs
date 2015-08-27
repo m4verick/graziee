@@ -35,6 +35,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil ditambah");
                     txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring((s_KurirManager.GetMaxIDKurir().IndexOf("-")) + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -56,6 +57,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil diubah");
                     txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring((s_KurirManager.GetMaxIDKurir().IndexOf("-")) + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -77,6 +79,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil dihapus");
                     txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring((s_KurirManager.GetMaxIDKurir().IndexOf("-")) + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -102,6 +105,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil dihapus permanen");
                     txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring((s_KurirManager.GetMaxIDKurir().IndexOf("-")) + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -124,6 +128,7 @@ namespace GrazieeProject.View
                 {
                     MessageBox.Show("Data berhasil dipulihkan");
                     txt_IdKurirNum.Text = Utils.DisplayMaxID(s_KurirManager.GetMaxIDKurir().Substring((s_KurirManager.GetMaxIDKurir().IndexOf("-")) + 1));
+                    ClearField();
                 }
                 else
                 {
@@ -160,6 +165,14 @@ namespace GrazieeProject.View
             {
                 MessageBox.Show("Gagal get data kurir : "+ex, "Error");
             }
+        }
+
+        private void ClearField()
+        {
+            txt_NamaKurir.Text = String.Empty;
+            txt_AlamatKurir.Text = String.Empty;
+            txt_NoTelpKurir.Text = String.Empty;
+            DisplayKurir();
         }
     }
 }
