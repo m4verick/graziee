@@ -148,6 +148,13 @@ namespace GrazieeProject.View
             dg_DisplayUserSistem.DataSource = s_BindingUserSistem;
         }
 
+        private void DisplayUserSistemSearch(string name)
+        {
+            s_BindingUserSistem.DataSource = s_userSistemManager.GetDataUserSistemByName(name).Tables[0];
+            s_BindingUserSistem.Filter = string.Empty;
+            dg_DisplayUserSistem.DataSource = s_BindingUserSistem;
+        }
+
         private void dg_DisplayUserSistem_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -174,6 +181,11 @@ namespace GrazieeProject.View
             txt_UlangiKataSandi.Text = String.Empty;
             cmb_Role.SelectedIndex = -1;
             DisplayUserSistem();
+        }
+
+        private void txt_SearchUserSistem_TextChanged(object sender, EventArgs e)
+        {
+            DisplayUserSistemSearch(txt_SearchUserSistem.Text.ToString());
         }
     }
 }

@@ -156,6 +156,13 @@ namespace GrazieeProject.View
             dg_DisplayPelanggan.DataSource = s_BindingPelanggan;
         }
 
+        private void DisplayPelangganSearch(string name)
+        {
+            s_BindingPelanggan.DataSource = s_PelangganManager.GetDataPelangganByName(name).Tables[0];
+            s_BindingPelanggan.Filter = string.Empty;
+            dg_DisplayPelanggan.DataSource = s_BindingPelanggan;
+        }
+
         private void dg_DisplayPelanggan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -186,6 +193,11 @@ namespace GrazieeProject.View
             txt_AlamatPelanggan.Text = String.Empty;
             txt_NoTelpPelanggan.Text = String.Empty;
             DisplayPelanggan();
+        }
+
+        private void txt_SearchPelanggan_TextChanged(object sender, EventArgs e)
+        {
+            DisplayPelangganSearch(txt_SearchPelanggan.Text.ToString());
         }
     }
 }

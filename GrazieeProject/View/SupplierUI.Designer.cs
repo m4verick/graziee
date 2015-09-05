@@ -31,6 +31,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dg_DisplaySupplier = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_IdSupplierNum = new System.Windows.Forms.TextBox();
             this.btn_PulihkanData = new System.Windows.Forms.Button();
             this.btn_HapusPermanen = new System.Windows.Forms.Button();
             this.btn_DeleteSupplier = new System.Windows.Forms.Button();
@@ -44,7 +45,7 @@
             this.lblAlamatPelanggan = new System.Windows.Forms.Label();
             this.lblNamaPelanggan = new System.Windows.Forms.Label();
             this.lblIdPelanggan = new System.Windows.Forms.Label();
-            this.txt_IdSupplierNum = new System.Windows.Forms.TextBox();
+            this.txt_SearchSuplier = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplaySupplier)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -52,20 +53,21 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_SearchSuplier);
             this.groupBox2.Controls.Add(this.dg_DisplaySupplier);
             this.groupBox2.Location = new System.Drawing.Point(350, 14);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(400, 420);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tampilan Data";
+            this.groupBox2.Text = "Display Data";
             // 
             // dg_DisplaySupplier
             // 
             this.dg_DisplaySupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_DisplaySupplier.Location = new System.Drawing.Point(35, 19);
+            this.dg_DisplaySupplier.Location = new System.Drawing.Point(6, 56);
             this.dg_DisplaySupplier.Name = "dg_DisplaySupplier";
-            this.dg_DisplaySupplier.Size = new System.Drawing.Size(355, 372);
+            this.dg_DisplaySupplier.Size = new System.Drawing.Size(384, 358);
             this.dg_DisplaySupplier.TabIndex = 0;
             this.dg_DisplaySupplier.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_DisplaySupplier_CellDoubleClick);
             // 
@@ -92,6 +94,14 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Data";
+            // 
+            // txt_IdSupplierNum
+            // 
+            this.txt_IdSupplierNum.Location = new System.Drawing.Point(255, 56);
+            this.txt_IdSupplierNum.Name = "txt_IdSupplierNum";
+            this.txt_IdSupplierNum.ReadOnly = true;
+            this.txt_IdSupplierNum.Size = new System.Drawing.Size(62, 20);
+            this.txt_IdSupplierNum.TabIndex = 13;
             // 
             // btn_PulihkanData
             // 
@@ -209,13 +219,13 @@
             this.lblIdPelanggan.TabIndex = 0;
             this.lblIdPelanggan.Text = "ID SUPPLIER";
             // 
-            // txt_IdSupplierNum
+            // txt_SearchSuplier
             // 
-            this.txt_IdSupplierNum.Location = new System.Drawing.Point(255, 56);
-            this.txt_IdSupplierNum.Name = "txt_IdSupplierNum";
-            this.txt_IdSupplierNum.ReadOnly = true;
-            this.txt_IdSupplierNum.Size = new System.Drawing.Size(62, 20);
-            this.txt_IdSupplierNum.TabIndex = 13;
+            this.txt_SearchSuplier.Location = new System.Drawing.Point(6, 24);
+            this.txt_SearchSuplier.Name = "txt_SearchSuplier";
+            this.txt_SearchSuplier.Size = new System.Drawing.Size(150, 20);
+            this.txt_SearchSuplier.TabIndex = 1;
+            this.txt_SearchSuplier.TextChanged += new System.EventHandler(this.txt_SearchSuplier_TextChanged);
             // 
             // SupplierUI
             // 
@@ -228,6 +238,7 @@
             this.Text = "Pengelolaan Supplier";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplaySupplier)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -255,5 +266,6 @@
         private System.Windows.Forms.Label lblNamaPelanggan;
         private System.Windows.Forms.Label lblIdPelanggan;
         private System.Windows.Forms.TextBox txt_IdSupplierNum;
+        private System.Windows.Forms.TextBox txt_SearchSuplier;
     }
 }

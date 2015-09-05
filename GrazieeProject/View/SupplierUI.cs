@@ -147,6 +147,13 @@ namespace GrazieeProject.View
             dg_DisplaySupplier.DataSource = s_BindingSupplier;
         }
 
+        private void DisplaySupplierSearch(string name)
+        {
+            s_BindingSupplier.DataSource = s_SupplierManager.GetDataSupplierByName(name).Tables[0];
+            s_BindingSupplier.Filter = string.Empty;
+            dg_DisplaySupplier.DataSource = s_BindingSupplier;
+        }
+
         private void dg_DisplaySupplier_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -172,6 +179,11 @@ namespace GrazieeProject.View
             txt_AlamatSupplier.Text = String.Empty;
             txt_NoTelpSupplier.Text = String.Empty;
             DisplaySupplier();
+        }
+
+        private void txt_SearchSuplier_TextChanged(object sender, EventArgs e)
+        {
+            DisplaySupplierSearch(txt_SearchSuplier.Text.ToString());
         }
     }
 }

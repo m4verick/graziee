@@ -47,6 +47,7 @@
             this.txt_IdPenggunaSistemNum = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dg_DisplayUserSistem = new System.Windows.Forms.DataGridView();
+            this.txt_SearchUserSistem = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplayUserSistem)).BeginInit();
@@ -225,21 +226,30 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_SearchUserSistem);
             this.groupBox2.Controls.Add(this.dg_DisplayUserSistem);
             this.groupBox2.Location = new System.Drawing.Point(329, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(400, 420);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tampilan Data";
+            this.groupBox2.Text = "Display Data";
             // 
             // dg_DisplayUserSistem
             // 
             this.dg_DisplayUserSistem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_DisplayUserSistem.Location = new System.Drawing.Point(35, 19);
+            this.dg_DisplayUserSistem.Location = new System.Drawing.Point(6, 51);
             this.dg_DisplayUserSistem.Name = "dg_DisplayUserSistem";
-            this.dg_DisplayUserSistem.Size = new System.Drawing.Size(355, 372);
+            this.dg_DisplayUserSistem.Size = new System.Drawing.Size(384, 340);
             this.dg_DisplayUserSistem.TabIndex = 0;
+            // 
+            // txt_SearchUserSistem
+            // 
+            this.txt_SearchUserSistem.Location = new System.Drawing.Point(6, 19);
+            this.txt_SearchUserSistem.Name = "txt_SearchUserSistem";
+            this.txt_SearchUserSistem.Size = new System.Drawing.Size(152, 20);
+            this.txt_SearchUserSistem.TabIndex = 1;
+            this.txt_SearchUserSistem.TextChanged += new System.EventHandler(this.txt_SearchUserSistem_TextChanged);
             // 
             // UserSistemUI
             // 
@@ -253,6 +263,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplayUserSistem)).EndInit();
             this.ResumeLayout(false);
 
@@ -279,6 +290,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dg_DisplayUserSistem;
         private System.Windows.Forms.TextBox txt_IdPenggunaSistemNum;
+        private System.Windows.Forms.TextBox txt_SearchUserSistem;
 
 
     }

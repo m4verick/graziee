@@ -300,6 +300,7 @@
             this.txt_DisplayMerekBarang.Name = "txt_DisplayMerekBarang";
             this.txt_DisplayMerekBarang.Size = new System.Drawing.Size(154, 20);
             this.txt_DisplayMerekBarang.TabIndex = 1;
+            this.txt_DisplayMerekBarang.TextChanged += new System.EventHandler(this.txt_DisplayMerekBarang_TextChanged);
             // 
             // dgv_MerekBarang
             // 
@@ -327,6 +328,7 @@
             this.txt_DisplayModelBarang.Name = "txt_DisplayModelBarang";
             this.txt_DisplayModelBarang.Size = new System.Drawing.Size(154, 20);
             this.txt_DisplayModelBarang.TabIndex = 2;
+            this.txt_DisplayModelBarang.TextChanged += new System.EventHandler(this.txt_DisplayModelBarang_TextChanged);
             // 
             // dgv_ModelBarang
             // 
@@ -354,6 +356,7 @@
             this.txt_DisplayWarnaBarang.Name = "txt_DisplayWarnaBarang";
             this.txt_DisplayWarnaBarang.Size = new System.Drawing.Size(154, 20);
             this.txt_DisplayWarnaBarang.TabIndex = 3;
+            this.txt_DisplayWarnaBarang.TextChanged += new System.EventHandler(this.txt_DisplayWarnaBarang_TextChanged);
             // 
             // dgv_WarnaBarang
             // 
@@ -381,6 +384,7 @@
             this.txt_DisplayUkuranBarang.Name = "txt_DisplayUkuranBarang";
             this.txt_DisplayUkuranBarang.Size = new System.Drawing.Size(154, 20);
             this.txt_DisplayUkuranBarang.TabIndex = 2;
+            this.txt_DisplayUkuranBarang.TextChanged += new System.EventHandler(this.txt_DisplayUkuranBarang_TextChanged);
             // 
             // dgv_UkuranBarang
             // 

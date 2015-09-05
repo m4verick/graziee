@@ -148,6 +148,13 @@ namespace GrazieeProject.View
             dg_DisplayKurir.DataSource = s_BindingKurir;
         }
 
+        private void DisplayKurirSearch(string name)
+        {
+            s_BindingKurir.DataSource = s_KurirManager.GetDataKurirByName(name).Tables[0];
+            s_BindingKurir.Filter = string.Empty;
+            dg_DisplayKurir.DataSource = s_BindingKurir;
+        }
+
         private void dg_DisplayKurir_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -173,6 +180,11 @@ namespace GrazieeProject.View
             txt_AlamatKurir.Text = String.Empty;
             txt_NoTelpKurir.Text = String.Empty;
             DisplayKurir();
+        }
+
+        private void KurirUI_TextChanged(object sender, EventArgs e)
+        {
+            DisplayKurirSearch(txt_SearchKurir.Text.ToString());
         }
     }
 }

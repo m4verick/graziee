@@ -79,10 +79,22 @@ namespace GrazieeProject.View
             dgv_MerekBarang.DataSource = s_BindingMerek; 
         }
 
+        private void DisplayMerekBarangSearch(string name)
+        {
+            s_BindingMerek.DataSource = s_MerekBarangManager.GetDataMerekByName(name).Tables[0];
+            s_BindingMerek.Filter = string.Empty;
+            dgv_MerekBarang.DataSource = s_BindingMerek;
+        }
+
         private void ClearFieldMerek()
         {
             txt_NamaMerekBarang.Text = String.Empty;
             DisplayMerekBarang();
+        }
+
+        private void txt_DisplayMerekBarang_TextChanged(object sender, EventArgs e)
+        {
+            DisplayMerekBarangSearch(txt_DisplayMerekBarang.Text.ToString());
         }
         #endregion
 
@@ -133,10 +145,22 @@ namespace GrazieeProject.View
             dgv_ModelBarang.DataSource = s_BindingModel;
         }
 
+        private void DisplayModelBarangSearch(string name)
+        {
+            s_BindingModel.DataSource = s_MerekBarangManager.GetDataModelByName(name).Tables[0];
+            s_BindingModel.Filter = string.Empty;
+            dgv_ModelBarang.DataSource = s_BindingModel;
+        }
+
         private void ClearFieldModel()
         {
             txt_NamaModelBarang.Text = String.Empty;
             DisplayModelBarang();
+        }
+
+        private void txt_DisplayModelBarang_TextChanged(object sender, EventArgs e)
+        {
+            DisplayModelBarangSearch(txt_DisplayModelBarang.Text.ToString());
         }
         #endregion
 
@@ -187,10 +211,22 @@ namespace GrazieeProject.View
             dgv_WarnaBarang.DataSource = s_BindingWarna;
         }
 
+        private void DisplayWarnaBarangSearch(string name)
+        {
+            s_BindingWarna.DataSource = s_MerekBarangManager.GetDataWarnaByName(name).Tables[0];
+            s_BindingWarna.Filter = string.Empty;
+            dgv_WarnaBarang.DataSource = s_BindingWarna;
+        }
+
         private void ClearFieldWarna()
         {
             txt_NamaWarnaBarang.Text = String.Empty;
             DisplayWarnaBarang();
+        }
+
+        private void txt_DisplayWarnaBarang_TextChanged(object sender, EventArgs e)
+        {
+            DisplayWarnaBarangSearch(txt_DisplayWarnaBarang.Text.ToString());
         }
         #endregion
 
@@ -241,10 +277,22 @@ namespace GrazieeProject.View
             dgv_UkuranBarang.DataSource = s_BindingUkuran;
         }
 
+        private void DisplayUkuranBarangSearch(string name)
+        {
+            s_BindingUkuran.DataSource = s_MerekBarangManager.GetDataUkuranByName(name).Tables[0];
+            s_BindingUkuran.Filter = string.Empty;
+            dgv_UkuranBarang.DataSource = s_BindingUkuran;
+        }
+
         private void ClearFieldUkuran()
         {
             txt_NamaUkuranBarang.Text = String.Empty;
             DisplayUkuranBarang();
+        }
+
+        private void txt_DisplayUkuranBarang_TextChanged(object sender, EventArgs e)
+        {
+            DisplayUkuranBarangSearch(txt_DisplayUkuranBarang.Text.ToString());
         }
         #endregion
     }

@@ -5,4 +5,16 @@ C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProje
 C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.csproj.GenerateResource.Cache
 C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.exe
 C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.pdb
-C:\Users\LUSIA\documents\visual studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.csprojResolveAssemblyReference.cache
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.AboutUI.resources
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.BarangUI.resources
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.KurirUI.resources
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.LoginUI.resources
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.MainUI.resources
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.MerekBarangUI.resources
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.PelangganUI.resources
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.SupplierUI.resources
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.TransaksiPembelianUI.resources
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.TransaksiPenjualanUI.resources
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.UserSistemUI.resources
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Release\GrazieeProject.exe.config
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Release\BarcodeLib.Barcode.WinForms.dll

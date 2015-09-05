@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_IdPelangganNum = new System.Windows.Forms.TextBox();
             this.btn_PulihkanData = new System.Windows.Forms.Button();
             this.btn_HapusPermanen = new System.Windows.Forms.Button();
             this.btn_DeletePelanggan = new System.Windows.Forms.Button();
@@ -44,7 +45,7 @@
             this.lblIdPelanggan = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dg_DisplayPelanggan = new System.Windows.Forms.DataGridView();
-            this.txt_IdPelangganNum = new System.Windows.Forms.TextBox();
+            this.txt_SearchPelanggan = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplayPelanggan)).BeginInit();
@@ -72,6 +73,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Data";
+            // 
+            // txt_IdPelangganNum
+            // 
+            this.txt_IdPelangganNum.Location = new System.Drawing.Point(244, 56);
+            this.txt_IdPelangganNum.Name = "txt_IdPelangganNum";
+            this.txt_IdPelangganNum.ReadOnly = true;
+            this.txt_IdPelangganNum.Size = new System.Drawing.Size(54, 20);
+            this.txt_IdPelangganNum.TabIndex = 13;
             // 
             // btn_PulihkanData
             // 
@@ -191,6 +200,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_SearchPelanggan);
             this.groupBox2.Controls.Add(this.dg_DisplayPelanggan);
             this.groupBox2.Location = new System.Drawing.Point(365, 12);
             this.groupBox2.Name = "groupBox2";
@@ -202,19 +212,19 @@
             // dg_DisplayPelanggan
             // 
             this.dg_DisplayPelanggan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_DisplayPelanggan.Location = new System.Drawing.Point(16, 19);
+            this.dg_DisplayPelanggan.Location = new System.Drawing.Point(16, 56);
             this.dg_DisplayPelanggan.Name = "dg_DisplayPelanggan";
-            this.dg_DisplayPelanggan.Size = new System.Drawing.Size(355, 372);
+            this.dg_DisplayPelanggan.Size = new System.Drawing.Size(355, 335);
             this.dg_DisplayPelanggan.TabIndex = 0;
             this.dg_DisplayPelanggan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_DisplayPelanggan_CellClick);
             // 
-            // txt_IdPelangganNum
+            // txt_SearchPelanggan
             // 
-            this.txt_IdPelangganNum.Location = new System.Drawing.Point(244, 56);
-            this.txt_IdPelangganNum.Name = "txt_IdPelangganNum";
-            this.txt_IdPelangganNum.ReadOnly = true;
-            this.txt_IdPelangganNum.Size = new System.Drawing.Size(54, 20);
-            this.txt_IdPelangganNum.TabIndex = 13;
+            this.txt_SearchPelanggan.Location = new System.Drawing.Point(16, 20);
+            this.txt_SearchPelanggan.Name = "txt_SearchPelanggan";
+            this.txt_SearchPelanggan.Size = new System.Drawing.Size(150, 20);
+            this.txt_SearchPelanggan.TabIndex = 1;
+            this.txt_SearchPelanggan.TextChanged += new System.EventHandler(this.txt_SearchPelanggan_TextChanged);
             // 
             // PelangganUI
             // 
@@ -229,6 +239,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplayPelanggan)).EndInit();
             this.ResumeLayout(false);
 
@@ -253,5 +264,6 @@
         private System.Windows.Forms.Button btn_PulihkanData;
         private System.Windows.Forms.Button btn_HapusPermanen;
         private System.Windows.Forms.TextBox txt_IdPelangganNum;
+        private System.Windows.Forms.TextBox txt_SearchPelanggan;
     }
 }

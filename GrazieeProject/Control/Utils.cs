@@ -17,6 +17,16 @@ namespace GrazieeProject.Control
         public static string DEFAULT_ID_MODEL_BARANG    = "MDL-0000";
         public static string DEFAULT_ID_UKURAN_BARANG   = "UKR-0000";
 
+        public static enum ClassSelector
+        {
+            SUPPLIER = 1,
+            MEREK_BARANG,
+            WARNA_BARANG,
+            MODEL_BARANG,
+            UKURAN_BARANG,
+            JENIS_BARANG
+        };
+
         public static string PassEncrypt(string toEncrypt, bool useHashing)
         {
             byte[] keyArray;

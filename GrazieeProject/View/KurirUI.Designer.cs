@@ -45,6 +45,7 @@
             this.lblIdPelanggan = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_IdKurirNum = new System.Windows.Forms.TextBox();
+            this.txt_SearchKurir = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplayKurir)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -132,20 +133,21 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_SearchKurir);
             this.groupBox2.Controls.Add(this.dg_DisplayKurir);
             this.groupBox2.Location = new System.Drawing.Point(350, 14);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(400, 420);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tampilan Data";
+            this.groupBox2.Text = "Display Data";
             // 
             // dg_DisplayKurir
             // 
             this.dg_DisplayKurir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_DisplayKurir.Location = new System.Drawing.Point(35, 19);
+            this.dg_DisplayKurir.Location = new System.Drawing.Point(6, 56);
             this.dg_DisplayKurir.Name = "dg_DisplayKurir";
-            this.dg_DisplayKurir.Size = new System.Drawing.Size(355, 372);
+            this.dg_DisplayKurir.Size = new System.Drawing.Size(384, 335);
             this.dg_DisplayKurir.TabIndex = 0;
             this.dg_DisplayKurir.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_DisplayKurir_CellContentClick);
             // 
@@ -216,6 +218,13 @@
             this.txt_IdKurirNum.Size = new System.Drawing.Size(73, 20);
             this.txt_IdKurirNum.TabIndex = 13;
             // 
+            // txt_SearchKurir
+            // 
+            this.txt_SearchKurir.Location = new System.Drawing.Point(7, 23);
+            this.txt_SearchKurir.Name = "txt_SearchKurir";
+            this.txt_SearchKurir.Size = new System.Drawing.Size(150, 20);
+            this.txt_SearchKurir.TabIndex = 1;
+            // 
             // KurirUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,7 +235,9 @@
             this.Name = "KurirUI";
             this.Text = "Pengelolaan Kurir";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.TextChanged += new System.EventHandler(this.KurirUI_TextChanged);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DisplayKurir)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -253,6 +264,7 @@
         private System.Windows.Forms.Label lblIdPelanggan;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_IdKurirNum;
+        private System.Windows.Forms.TextBox txt_SearchKurir;
 
     }
 }
