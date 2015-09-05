@@ -43,3 +43,4 @@ D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin
 D:\Users\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Debug\BarcodeLib.Barcode.WinForms.dll
 C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Debug\GrazieeProject.exe.config
 C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Debug\BarcodeLib.Barcode.WinForms.dll
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Debug\GrazieeProject.View.DisplayAll.resources

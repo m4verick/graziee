@@ -29,6 +29,23 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_CariUkuranBarang = new System.Windows.Forms.Button();
+            this.txt_UkuranName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btn_CariJenisBarang = new System.Windows.Forms.Button();
+            this.btn_CariModelBarang = new System.Windows.Forms.Button();
+            this.btn_CariWarnaBarang = new System.Windows.Forms.Button();
+            this.btn_CariMerekBarang = new System.Windows.Forms.Button();
+            this.btn_CariSupplierBarang = new System.Windows.Forms.Button();
+            this.txt_JenisName = new System.Windows.Forms.TextBox();
+            this.txt_ModelName = new System.Windows.Forms.TextBox();
+            this.txt_WarnaName = new System.Windows.Forms.TextBox();
+            this.txt_MerekName = new System.Windows.Forms.TextBox();
+            this.txt_SupplierName = new System.Windows.Forms.TextBox();
+            this.txt_HargaBarang = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pb_BarcodeImage = new System.Windows.Forms.PictureBox();
             this.txt_IdBarangNum = new System.Windows.Forms.TextBox();
             this.btn_UpdateDataBarang = new System.Windows.Forms.Button();
@@ -47,26 +64,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txt_HargaBarang = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_SearchBarang = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txt_SupplierName = new System.Windows.Forms.TextBox();
-            this.txt_MerekName = new System.Windows.Forms.TextBox();
-            this.txt_WarnaName = new System.Windows.Forms.TextBox();
-            this.txt_ModelName = new System.Windows.Forms.TextBox();
-            this.txt_JenisName = new System.Windows.Forms.TextBox();
-            this.btn_CariSupplierBarang = new System.Windows.Forms.Button();
-            this.btn_CariMerekBarang = new System.Windows.Forms.Button();
-            this.btn_CariWarnaBarang = new System.Windows.Forms.Button();
-            this.btn_CariModelBarang = new System.Windows.Forms.Button();
-            this.btn_CariJenisBarang = new System.Windows.Forms.Button();
-            this.btn_CariUkuranBarang = new System.Windows.Forms.Button();
-            this.txt_UkuranName = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txt_SearchBarang = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_BarcodeImage)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -116,6 +116,157 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Data";
+            // 
+            // btn_CariUkuranBarang
+            // 
+            this.btn_CariUkuranBarang.Location = new System.Drawing.Point(362, 192);
+            this.btn_CariUkuranBarang.Name = "btn_CariUkuranBarang";
+            this.btn_CariUkuranBarang.Size = new System.Drawing.Size(82, 23);
+            this.btn_CariUkuranBarang.TabIndex = 44;
+            this.btn_CariUkuranBarang.Text = "Cari Data";
+            this.btn_CariUkuranBarang.UseVisualStyleBackColor = true;
+            this.btn_CariUkuranBarang.Click += new System.EventHandler(this.btn_CariUkuranBarang_Click);
+            // 
+            // txt_UkuranName
+            // 
+            this.txt_UkuranName.Location = new System.Drawing.Point(201, 194);
+            this.txt_UkuranName.Name = "txt_UkuranName";
+            this.txt_UkuranName.ReadOnly = true;
+            this.txt_UkuranName.Size = new System.Drawing.Size(155, 20);
+            this.txt_UkuranName.TabIndex = 43;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(19, 197);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(101, 13);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "UKURAN BARANG";
+            // 
+            // btn_CariJenisBarang
+            // 
+            this.btn_CariJenisBarang.Location = new System.Drawing.Point(362, 221);
+            this.btn_CariJenisBarang.Name = "btn_CariJenisBarang";
+            this.btn_CariJenisBarang.Size = new System.Drawing.Size(82, 23);
+            this.btn_CariJenisBarang.TabIndex = 41;
+            this.btn_CariJenisBarang.Text = "Cari Data";
+            this.btn_CariJenisBarang.UseVisualStyleBackColor = true;
+            this.btn_CariJenisBarang.Click += new System.EventHandler(this.btn_CariJenisBarang_Click);
+            // 
+            // btn_CariModelBarang
+            // 
+            this.btn_CariModelBarang.Location = new System.Drawing.Point(362, 163);
+            this.btn_CariModelBarang.Name = "btn_CariModelBarang";
+            this.btn_CariModelBarang.Size = new System.Drawing.Size(82, 23);
+            this.btn_CariModelBarang.TabIndex = 40;
+            this.btn_CariModelBarang.Text = "Cari Data";
+            this.btn_CariModelBarang.UseVisualStyleBackColor = true;
+            this.btn_CariModelBarang.Click += new System.EventHandler(this.btn_CariModelBarang_Click);
+            // 
+            // btn_CariWarnaBarang
+            // 
+            this.btn_CariWarnaBarang.Location = new System.Drawing.Point(362, 130);
+            this.btn_CariWarnaBarang.Name = "btn_CariWarnaBarang";
+            this.btn_CariWarnaBarang.Size = new System.Drawing.Size(82, 23);
+            this.btn_CariWarnaBarang.TabIndex = 39;
+            this.btn_CariWarnaBarang.Text = "Cari Data";
+            this.btn_CariWarnaBarang.UseVisualStyleBackColor = true;
+            this.btn_CariWarnaBarang.Click += new System.EventHandler(this.btn_CariWarnaBarang_Click);
+            // 
+            // btn_CariMerekBarang
+            // 
+            this.btn_CariMerekBarang.Location = new System.Drawing.Point(362, 98);
+            this.btn_CariMerekBarang.Name = "btn_CariMerekBarang";
+            this.btn_CariMerekBarang.Size = new System.Drawing.Size(82, 23);
+            this.btn_CariMerekBarang.TabIndex = 38;
+            this.btn_CariMerekBarang.Text = "Cari Data";
+            this.btn_CariMerekBarang.UseVisualStyleBackColor = true;
+            this.btn_CariMerekBarang.Click += new System.EventHandler(this.btn_CariMerekBarang_Click);
+            // 
+            // btn_CariSupplierBarang
+            // 
+            this.btn_CariSupplierBarang.Location = new System.Drawing.Point(362, 67);
+            this.btn_CariSupplierBarang.Name = "btn_CariSupplierBarang";
+            this.btn_CariSupplierBarang.Size = new System.Drawing.Size(82, 23);
+            this.btn_CariSupplierBarang.TabIndex = 37;
+            this.btn_CariSupplierBarang.Text = "Cari Data";
+            this.btn_CariSupplierBarang.UseVisualStyleBackColor = true;
+            this.btn_CariSupplierBarang.Click += new System.EventHandler(this.btn_CariSupplierBarang_Click);
+            // 
+            // txt_JenisName
+            // 
+            this.txt_JenisName.Location = new System.Drawing.Point(201, 223);
+            this.txt_JenisName.Name = "txt_JenisName";
+            this.txt_JenisName.ReadOnly = true;
+            this.txt_JenisName.Size = new System.Drawing.Size(155, 20);
+            this.txt_JenisName.TabIndex = 36;
+            // 
+            // txt_ModelName
+            // 
+            this.txt_ModelName.Location = new System.Drawing.Point(201, 165);
+            this.txt_ModelName.Name = "txt_ModelName";
+            this.txt_ModelName.ReadOnly = true;
+            this.txt_ModelName.Size = new System.Drawing.Size(155, 20);
+            this.txt_ModelName.TabIndex = 35;
+            // 
+            // txt_WarnaName
+            // 
+            this.txt_WarnaName.Location = new System.Drawing.Point(201, 132);
+            this.txt_WarnaName.Name = "txt_WarnaName";
+            this.txt_WarnaName.ReadOnly = true;
+            this.txt_WarnaName.Size = new System.Drawing.Size(155, 20);
+            this.txt_WarnaName.TabIndex = 34;
+            // 
+            // txt_MerekName
+            // 
+            this.txt_MerekName.Location = new System.Drawing.Point(201, 100);
+            this.txt_MerekName.Name = "txt_MerekName";
+            this.txt_MerekName.ReadOnly = true;
+            this.txt_MerekName.Size = new System.Drawing.Size(155, 20);
+            this.txt_MerekName.TabIndex = 33;
+            // 
+            // txt_SupplierName
+            // 
+            this.txt_SupplierName.Location = new System.Drawing.Point(201, 69);
+            this.txt_SupplierName.Name = "txt_SupplierName";
+            this.txt_SupplierName.ReadOnly = true;
+            this.txt_SupplierName.Size = new System.Drawing.Size(155, 20);
+            this.txt_SupplierName.TabIndex = 32;
+            // 
+            // txt_HargaBarang
+            // 
+            this.txt_HargaBarang.Location = new System.Drawing.Point(201, 259);
+            this.txt_HargaBarang.Name = "txt_HargaBarang";
+            this.txt_HargaBarang.Size = new System.Drawing.Size(155, 20);
+            this.txt_HargaBarang.TabIndex = 31;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(201, 427);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(91, 23);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Pulihkan Data";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(55, 427);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(108, 23);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Hapus Permanen";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(247, 389);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Hapus Data";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // pb_BarcodeImage
             // 
@@ -287,40 +438,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID BARANG";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(247, 389);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Hapus Data";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(55, 427);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 23);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Hapus Permanen";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(201, 427);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 23);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Pulihkan Data";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // txt_HargaBarang
-            // 
-            this.txt_HargaBarang.Location = new System.Drawing.Point(201, 259);
-            this.txt_HargaBarang.Name = "txt_HargaBarang";
-            this.txt_HargaBarang.Size = new System.Drawing.Size(155, 20);
-            this.txt_HargaBarang.TabIndex = 31;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
@@ -332,13 +449,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Display Data";
             // 
-            // txt_SearchBarang
-            // 
-            this.txt_SearchBarang.Location = new System.Drawing.Point(12, 27);
-            this.txt_SearchBarang.Name = "txt_SearchBarang";
-            this.txt_SearchBarang.Size = new System.Drawing.Size(150, 20);
-            this.txt_SearchBarang.TabIndex = 0;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -347,117 +457,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(594, 194);
             this.dataGridView1.TabIndex = 1;
             // 
-            // txt_SupplierName
+            // txt_SearchBarang
             // 
-            this.txt_SupplierName.Location = new System.Drawing.Point(201, 69);
-            this.txt_SupplierName.Name = "txt_SupplierName";
-            this.txt_SupplierName.ReadOnly = true;
-            this.txt_SupplierName.Size = new System.Drawing.Size(155, 20);
-            this.txt_SupplierName.TabIndex = 32;
-            // 
-            // txt_MerekName
-            // 
-            this.txt_MerekName.Location = new System.Drawing.Point(201, 100);
-            this.txt_MerekName.Name = "txt_MerekName";
-            this.txt_MerekName.ReadOnly = true;
-            this.txt_MerekName.Size = new System.Drawing.Size(155, 20);
-            this.txt_MerekName.TabIndex = 33;
-            // 
-            // txt_WarnaName
-            // 
-            this.txt_WarnaName.Location = new System.Drawing.Point(201, 132);
-            this.txt_WarnaName.Name = "txt_WarnaName";
-            this.txt_WarnaName.ReadOnly = true;
-            this.txt_WarnaName.Size = new System.Drawing.Size(155, 20);
-            this.txt_WarnaName.TabIndex = 34;
-            // 
-            // txt_ModelName
-            // 
-            this.txt_ModelName.Location = new System.Drawing.Point(201, 165);
-            this.txt_ModelName.Name = "txt_ModelName";
-            this.txt_ModelName.ReadOnly = true;
-            this.txt_ModelName.Size = new System.Drawing.Size(155, 20);
-            this.txt_ModelName.TabIndex = 35;
-            // 
-            // txt_JenisName
-            // 
-            this.txt_JenisName.Location = new System.Drawing.Point(201, 223);
-            this.txt_JenisName.Name = "txt_JenisName";
-            this.txt_JenisName.ReadOnly = true;
-            this.txt_JenisName.Size = new System.Drawing.Size(155, 20);
-            this.txt_JenisName.TabIndex = 36;
-            // 
-            // btn_CariSupplierBarang
-            // 
-            this.btn_CariSupplierBarang.Location = new System.Drawing.Point(362, 67);
-            this.btn_CariSupplierBarang.Name = "btn_CariSupplierBarang";
-            this.btn_CariSupplierBarang.Size = new System.Drawing.Size(82, 23);
-            this.btn_CariSupplierBarang.TabIndex = 37;
-            this.btn_CariSupplierBarang.Text = "Cari Data";
-            this.btn_CariSupplierBarang.UseVisualStyleBackColor = true;
-            this.btn_CariSupplierBarang.Click += new System.EventHandler(this.btn_CariSupplierBarang_Click);
-            // 
-            // btn_CariMerekBarang
-            // 
-            this.btn_CariMerekBarang.Location = new System.Drawing.Point(362, 98);
-            this.btn_CariMerekBarang.Name = "btn_CariMerekBarang";
-            this.btn_CariMerekBarang.Size = new System.Drawing.Size(82, 23);
-            this.btn_CariMerekBarang.TabIndex = 38;
-            this.btn_CariMerekBarang.Text = "Cari Data";
-            this.btn_CariMerekBarang.UseVisualStyleBackColor = true;
-            // 
-            // btn_CariWarnaBarang
-            // 
-            this.btn_CariWarnaBarang.Location = new System.Drawing.Point(362, 130);
-            this.btn_CariWarnaBarang.Name = "btn_CariWarnaBarang";
-            this.btn_CariWarnaBarang.Size = new System.Drawing.Size(82, 23);
-            this.btn_CariWarnaBarang.TabIndex = 39;
-            this.btn_CariWarnaBarang.Text = "Cari Data";
-            this.btn_CariWarnaBarang.UseVisualStyleBackColor = true;
-            // 
-            // btn_CariModelBarang
-            // 
-            this.btn_CariModelBarang.Location = new System.Drawing.Point(362, 163);
-            this.btn_CariModelBarang.Name = "btn_CariModelBarang";
-            this.btn_CariModelBarang.Size = new System.Drawing.Size(82, 23);
-            this.btn_CariModelBarang.TabIndex = 40;
-            this.btn_CariModelBarang.Text = "Cari Data";
-            this.btn_CariModelBarang.UseVisualStyleBackColor = true;
-            // 
-            // btn_CariJenisBarang
-            // 
-            this.btn_CariJenisBarang.Location = new System.Drawing.Point(362, 221);
-            this.btn_CariJenisBarang.Name = "btn_CariJenisBarang";
-            this.btn_CariJenisBarang.Size = new System.Drawing.Size(82, 23);
-            this.btn_CariJenisBarang.TabIndex = 41;
-            this.btn_CariJenisBarang.Text = "Cari Data";
-            this.btn_CariJenisBarang.UseVisualStyleBackColor = true;
-            // 
-            // btn_CariUkuranBarang
-            // 
-            this.btn_CariUkuranBarang.Location = new System.Drawing.Point(362, 192);
-            this.btn_CariUkuranBarang.Name = "btn_CariUkuranBarang";
-            this.btn_CariUkuranBarang.Size = new System.Drawing.Size(82, 23);
-            this.btn_CariUkuranBarang.TabIndex = 44;
-            this.btn_CariUkuranBarang.Text = "Cari Data";
-            this.btn_CariUkuranBarang.UseVisualStyleBackColor = true;
-            // 
-            // txt_UkuranName
-            // 
-            this.txt_UkuranName.Location = new System.Drawing.Point(201, 194);
-            this.txt_UkuranName.Name = "txt_UkuranName";
-            this.txt_UkuranName.ReadOnly = true;
-            this.txt_UkuranName.Size = new System.Drawing.Size(155, 20);
-            this.txt_UkuranName.TabIndex = 43;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(19, 197);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 13);
-            this.label10.TabIndex = 42;
-            this.label10.Text = "UKURAN BARANG";
+            this.txt_SearchBarang.Location = new System.Drawing.Point(12, 27);
+            this.txt_SearchBarang.Name = "txt_SearchBarang";
+            this.txt_SearchBarang.Size = new System.Drawing.Size(150, 20);
+            this.txt_SearchBarang.TabIndex = 0;
             // 
             // BarangUI
             // 

@@ -18,3 +18,5 @@ C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProje
 C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.UserSistemUI.resources
 C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Release\GrazieeProject.exe.config
 C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\bin\Release\BarcodeLib.Barcode.WinForms.dll
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.csprojResolveAssemblyReference.cache
+C:\Users\LUSIA\Documents\Visual Studio 2010\Projects\GrazieeProject\GrazieeProject\obj\x86\Release\GrazieeProject.View.DisplayAll.resources

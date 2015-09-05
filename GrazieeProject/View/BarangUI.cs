@@ -19,6 +19,38 @@ namespace GrazieeProject.View
         BarangManager s_BarangManager;
         private BindingSource s_BindingBarang = new BindingSource();
 
+        #region SetGet_TextBox
+        public TextBox SupplierName
+        {
+            get { return this.txt_SupplierName; }
+        }
+
+        public TextBox MerekName
+        {
+            get { return this.txt_MerekName; }
+        }
+
+        public TextBox WarnaName
+        {
+            get { return this.txt_WarnaName; }
+        }
+
+        public TextBox ModelName
+        {
+            get { return this.txt_ModelName; }
+        }
+
+        public TextBox UkuranName
+        {
+            get { return this.txt_UkuranName; }
+        }
+
+        public TextBox JenisName
+        {
+            get { return this.txt_JenisName; }
+        }
+        #endregion
+
         public BarangUI()
         {
             InitializeComponent();
@@ -49,7 +81,38 @@ namespace GrazieeProject.View
 
         private void btn_CariSupplierBarang_Click(object sender, EventArgs e)
         {
+            DisplayAll disp = new DisplayAll(Utils.ClassSelector.SUPPLIER);
+            disp.Show();
+        }
 
+        private void btn_CariMerekBarang_Click(object sender, EventArgs e)
+        {
+            DisplayAll disp = new DisplayAll(Utils.ClassSelector.MEREK_BARANG);
+            disp.Show();
+        }
+
+        private void btn_CariWarnaBarang_Click(object sender, EventArgs e)
+        {
+            DisplayAll disp = new DisplayAll(Utils.ClassSelector.WARNA_BARANG);
+            disp.Show();
+        }
+
+        private void btn_CariModelBarang_Click(object sender, EventArgs e)
+        {
+            DisplayAll disp = new DisplayAll(Utils.ClassSelector.MODEL_BARANG);
+            disp.Show();
+        }
+
+        private void btn_CariUkuranBarang_Click(object sender, EventArgs e)
+        {
+            DisplayAll disp = new DisplayAll(Utils.ClassSelector.UKURAN_BARANG);
+            disp.Show();
+        }
+
+        private void btn_CariJenisBarang_Click(object sender, EventArgs e)
+        {
+            DisplayAll disp = new DisplayAll(Utils.ClassSelector.JENIS_BARANG);
+            disp.Show();
         } 
     }
 }

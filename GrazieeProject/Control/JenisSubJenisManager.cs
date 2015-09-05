@@ -335,7 +335,36 @@ namespace GrazieeProject.Control
         {
             dataSet = new DataSet();
             query = string.Empty;
-            query = "SELECT * FROM jenis_sub_jenis";
+            query = "SELECT jsj.id_jenis, jb.nama_jenis, sj.nama_sub_jenis FROM jenis_sub_jenis jsj JOIN jenis_barang jb ON jb.id_jenis_barang = jsj.id_jenis_barang JOIN sub_jenis_barang sj ON sj.id_sub_jenis_barang = jsj.id_sub_jenis_barang";
+
+            try
+            {
+                connect.Open();
+                adapt = new MySqlDataAdapter(query, connect);
+                adapt.Fill(dataSet);
+            }
+            catch (MySqlException ex)
+            {
+                ex.Message.ToString();
+                return null;
+            }
+            catch (Exception exec)
+            {
+                exec.Message.ToString();
+                return null;
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return dataSet;
+        }
+
+        public DataSet GetDataJenisSubJenisByName(string search)
+        {
+            dataSet = new DataSet();
+            query = string.Empty;
+            query = "SELECT jsj.id_jenis, jb.nama_jenis, sj.nama_sub_jenis FROM jenis_sub_jenis jsj JOIN jenis_barang jb ON jb.id_jenis_barang = jsj.id_jenis_barang JOIN sub_jenis_barang sj ON sj.id_sub_jenis_barang = jsj.id_sub_jenis_barang WHERE jb.nama_jenis LIKE '%" + search + "%'";
 
             try
             {
